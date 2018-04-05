@@ -298,11 +298,38 @@
 
 </body>
 <script>
-if(document.getElementsByClassName('post-hover')){
 
-	mot()
+
+
+function hei(){//定义函数
+if(window.innerHeight)
+Height=window.innerHeight;
+
+else if((document.body) && (document.body.clientHidth))
+Height = document.body.clientHidth;
+
+if(window.innerWidth)
+Width=window.innerWidth;
+else if((document.body) && (document.body.clientWidth))
+Width = document.body.clientWidth;
+	console.log(Width)
+	if(Width>=300)
+	{
+		mot()	
+	}else{
+		//clran(mot)
+	}
+	//document.getElementById("aa").style.height=Height +"px";
+	//document.getElementById("aa").style.width=Width +"px";
+	//var pos = document.getElementsByClassName('recent-post-link')
 	
+	//var posw = pos[0].clientWidth
+	//cans.width=posw;
 }
+hei();//调用函数
+//window.onresize=hei//浏览器发生改变时触发函数；
+//mot()
+
 function mot(){
 	var pos = document.getElementsByClassName('recent-post-link')
 	//pos[0].style.width=100+'px'
@@ -326,7 +353,7 @@ function mot(){
 	cans.width=posw;
 	cans.height=250;
 	
-	
+	//window.onresize=hei
 	
 	
 	
