@@ -3,26 +3,46 @@
   
     
     <entry>
-      <title>没有什么不可能的</title>
+      <title>面向对象-星星连线</title>
       <link href="/2018/04/05/%E6%B2%A1%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%AF%E8%83%BD%E7%9A%84/"/>
       <url>/2018/04/05/%E6%B2%A1%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%AF%E8%83%BD%E7%9A%84/</url>
-      <content type="html"><![CDATA[]]></content>
+      <content type="html"><![CDATA[<script>/*var pos = document.getElementsByClassName('post-page-title')    //pos[0].style.width=100+'px'    //var posw = pos[0].clientWidth    //var posh = pos[0].clientHeight+6    //console.log(posh)    var fragment = document.createDocumentFragment();//节点片段    var can  =    document.createElement('canvas')//创建div标签    can.className = 'balloon';    can.style.width = "100%";    can.style.height ="100%";    can.style.position= "relative"    can.style.top="3px"    can.style.background = "#000"    fragment.appendChild(can);    //document.body.appendChild(can);    pos[0].appendChild(can);    */</script>]]></content>
       
       <categories>
           
-          <category> //文章分类 </category>
+          <category> canvas </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 星星连线 </tag>
+            
+            <tag> 点对点 </tag>
+            
+        </tags>
       
     </entry>
     
     <entry>
       <title>这是世界很美好 --林</title>
-      <link href="/2018/04/04/%E8%BF%99%E6%98%AF%E4%B8%96%E7%95%8C%E5%BE%88%E7%BE%8E%E5%A5%BD--%E6%9E%97/"/>
-      <url>/2018/04/04/%E8%BF%99%E6%98%AF%E4%B8%96%E7%95%8C%E5%BE%88%E7%BE%8E%E5%A5%BD--%E6%9E%97/</url>
+      <link href="/2018/04/04/%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E5%BE%88%E7%BE%8E%E5%A5%BD--%E6%9E%97/"/>
+      <url>/2018/04/04/%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E5%BE%88%E7%BE%8E%E5%A5%BD--%E6%9E%97/</url>
       <content type="html"><![CDATA[]]></content>
       
+      <categories>
+          
+          <category> 美好 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 美好 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -39,16 +59,16 @@
   
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>photo</title>
+      <link href="/photo/index.html"/>
+      <url>/photo/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>photo</title>
-      <link href="/photo/index.html"/>
-      <url>/photo/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     

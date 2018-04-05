@@ -38,7 +38,7 @@
 <div id="menu-outer">
   <div id="menu-inner">
       <ul id="slide-out" class="side-nav" >
-    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#fff">
     <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
     <p>猫的故事</p>
     <div class="nav-link">
@@ -98,7 +98,7 @@
 
 <ul class="dropdown-menu dropdown" >
     <li class="nav-dropdown-list">
-        <a class="category-link" href="/categories/文章分类/">//文章分类<span class="category-count">1</span></a>
+        <a class="category-link" href="/categories/canvas/">canvas<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/美好/">美好<span class="category-count">1</span></a>
     </li>
 </ul>
 <!--tags-->
@@ -141,54 +141,60 @@
 
 <div id="content-outer">
   <div id="content-inner">
-    
-<article id="post">
-  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/random/vateral-2.png)" >
-  <h2>这是世界很美好 --林</h2>
-    
-  <p>作者:猫的故事 &nbsp&nbsp 发布于:<time datetime="2018-04-04T12:42:45.000Z">
-          2018-04-04
-    </time>
-  </p>
-    
-  </div>
-  <div class="post-page-content">
+    <div id="recent-posts">
   
-  </div>
-  <!--评论块-->
-    
+      <div class="recent-post-item lazy" style="background-color:#fff"   data-original="/images/random/vateral-2.png"  >
+        <a class="recent-post-link" href="/2018/04/04/这个世界很美好--林/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2018/04/04/这个世界很美好--林/" >这是世界很美好 --林</a></p>
 
-</article>
-<nav class="post-nav">
-  <!-- Prev Nav -->
-    
-  <a href="/2018/04/05/没有什么不可能的/" id="post_nav-newer" class="post-nav-content prev-content">
-      新篇
-  </a>
-    
+          <!--date-->
+          
+            <p class="post-time">猫的故事 &nbsp &nbsp 发布于:<time datetime="2018-04-04T12:42:45.000Z">
+              2018-04-04
+            </time>
+            </p>
+          
 
+          <!--tags-->
 
-  <!-- Next Nav -->
-    
-  <a href="/2018/04/04/hello-world/" id="post_nav-older" class="post-nav-content next-content">
-      旧篇
-  </a>
-    
+          标签:
+            
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/美好/">美好</a></li></ul>
+            
+          <!--分类-->
+
+          分类:
+            
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/美好/">美好</a></li></ul>
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2018/04/04/这个世界很美好--林/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+  
+  <nav class="paging">
+    <span class="page-number current">1</span>
 </nav>
-<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
-<div class="post-toc-none"><p>(无)</p></div>
-<div class="post-toc-box">
-    
 </div>
-<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
-<script type="text/javascript">
-    menu();
-</script>
+
+
   </div>
 </div>
 <div id="bottom-outer">
   <div id="bottom-inner">
-    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#fff"><i class="material-icons material-up">vertical_align_top</i></div></a>
 
 
 <p >Copyright ©  2017  个人博客</p>
@@ -254,4 +260,154 @@
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </body>
+<script>
+if(document.getElementsByClassName('post-hover')){
+
+	mot()
+	
+}
+function mot(){
+	var pos = document.getElementsByClassName('recent-post-link')
+	//pos[0].style.width=100+'px'
+	var posw = pos[0].clientWidth
+	var posh = pos[0].clientHeight+6
+	//console.log(posh)
+	var fragment = document.createDocumentFragment();//节点片段
+	var can  =	document.createElement('canvas')//创建div标签
+	can.id = 'canvas';
+	//can.style.width = "100%";
+	//can.style.height ="250px";
+	can.style.position= "relative"
+	can.style.top="3px"
+	//can.style.z-index="2"
+	can.style.background =" rgba(255,255,255,0.1)"
+	fragment.appendChild(can);
+	//document.body.appendChild(can);
+	pos[0].appendChild(can);
+	var cans = document.getElementById("canvas");
+	var ctx = cans.getContext("2d");
+	cans.width=posw;
+	cans.height=250;
+	
+	
+	
+	
+	
+	function ball(){
+	
+	 this.x = randomNum(3, canvas.width - 3);  
+     this.y = randomNum(3, canvas.height - 3);  
+     this.r = randomNum(1, 3); 
+	 this.color = randomColor();  
+     this.speedX = randomNum(-3, 3) * 0.2;  
+     this.speedY = randomNum(-3, 3) * 0.2;   
+}
+ball.prototype={
+	draw:function(){
+		ctx.beginPath();  
+		ctx.globalAlpha = 1;
+		ctx.fillStyle = this.color; 
+		ctx.shadowBlur=10;
+		ctx.shadowColor="#FF6600";
+		ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);  
+		ctx.fill();  
+
+	},
+	move: function() {  
+                    this.x += this.speedX;  
+                    this.y += this.speedY;  
+                     
+                    if (this.x <= 3 || this.x > canvas.width - 3) {  
+                        this.speedX *= -1;  
+                    }  
+                    if (this.y <= 3 || this.y >= canvas.height - 3) {  
+                        this.speedY *= -1;  
+                    }  
+                }  
+
+}
+ var balls = [];  
+
+
+for (var i = 0; i < 50; i++) {  
+            var boll = new ball();
+			//console.log(boll.draw)
+           balls.push(boll);
+			//console.log(balls.length)  
+        }  
+main()
+function main() {  
+            ctx.clearRect(0, 0, canvas.width, canvas.height);  
+                     
+            mouseLine();  
+        
+            drawLine();  
+             
+            window.requestAnimationFrame(main);  
+        }  
+
+        var mouseX;  
+        var mouseY;  
+       
+			document.addEventListener("mousemove",function(e){
+				var ev = event || e;  
+				
+                mouseX = ev.offsetX;  
+                mouseY = ev.offsetY;
+				//console.log(mouseX) 
+			})
+			//drawLine() 
+function drawLine(){
+		for(var i = 0; i<balls.length;i++){
+			balls[i].draw()
+			balls[i].move(); 
+			//console.log(i+"只是i") 
+			  for (var j = 0; j < balls.length; j++) {  
+			  	if(i != j){//反//Math.sqrt()平方根  Math.pow(4,3)//(4*4*4)
+					//console.log(j+"只是j") 
+					 if (Math.sqrt(Math.pow((balls[i].x - balls[j].x), 2) + Math.pow((balls[i].y - balls[j].y), 2)) < 80){ //平方根 
+                            ctx.beginPath();  
+                            ctx.moveTo(balls[i].x, balls[i].y);//moveTo()从x,y 点绘制到lineTo()点x,y绘制线
+                            ctx.lineTo(balls[j].x, balls[j].y);  
+                            ctx.strokeStyle = "white";  //颜色
+                            ctx.globalAlpha = 0.2;  //透明度
+                            ctx.stroke();  
+				}  
+			}  
+		}  
+	}  
+        
+}
+
+
+function mouseLine() {  
+            for (var i = 0; i < balls.length; i++) {  
+                if (Math.sqrt(Math.pow((balls[i].x - mouseX), 2) + Math.pow((balls[i].y - mouseY), 2)) < 80) {  
+                    ctx.beginPath();  
+                    ctx.moveTo(balls[i].x, balls[i].y);  
+                    ctx.lineTo(mouseX, mouseY);  
+                    ctx.strokeStyle = "white";  
+                    ctx.globalAlpha = 0.8;  
+                    ctx.stroke();  
+                }  
+            }  
+        }  
+
+
+
+console.log(Math.sqrt(2000))
+
+
+
+function randomNum(m,n){
+//Math.random() * (n - m + 1) + m);
+	return Math.floor(Math.random()*(n-m+1)+m)//Math.floor()向下取整
+}
+function randomColor() {  
+            return "rgb(" + randomNum(0, 255) + "," + randomNum(0, 255) + "," + randomNum(0, 255) + ")";  
+        } 
+}	
+	
+</script>
+
 </html>
