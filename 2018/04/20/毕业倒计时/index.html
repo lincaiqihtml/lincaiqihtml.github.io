@@ -147,57 +147,130 @@
 <div id="content-outer">
 
   <div id="content-inner">
-    <div id="recent-posts">
-  
-      <div class="recent-post-item lazy" style="background-color:#fff"   data-original="/images/random/vateral-1.png"  >
-        <a class="recent-post-link" href="/2018/04/05/没有什么不可能的/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2018/04/05/没有什么不可能的/" >面向对象-星星连线</a></p>
+    
+<article id="post">
+  <div class="post-page-title" style="background-color:#fff;background-image:url(/images/random/vateral-5.png)" >
+  <h2>毕业倒计时</h2>
+    
+  <p>作者:猫的故事 &nbsp&nbsp 发布于:<time datetime="2018-04-20T14:12:36.000Z">
+          2018-04-20
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h3 id=""><a href="#" class="headerlink" title=" "></a><div id="s" style="width:100%;height:30px;border:#ccc solid 0px; text-align:center"> </div></h3><h3 id="-1"><a href="#-1" class="headerlink" title=""></a><div id="f" style="width:100%;height:30px;border:#ccc solid 0px; text-align:center"></div></h3><script>
+var a = document.getElementById("s")
+var f = document.getElementById("f")
+var weekday=new Array(7)
+weekday[0]="星期日"
+weekday[1]="星期一"
+weekday[2]="星期二"
+weekday[3]="星期三"
+weekday[4]="星期四"
+weekday[5]="星期五"
+weekday[6]="星期六"
+function time(){
+    var data = new Date();
+    var todata = new Date("2018/05/25");
+    //console.log("现在:"+data)
+    //console.log("未来:"+todata)
+    data.setTime(data.getTime()+250)//时间缀
+    var xc = todata-data
+    var days = Math.floor(xc/1000/60/60/24)
+    var h = Math.floor(xc/1000/60/60%24)
+    var m = Math.floor(xc/1000/60%60)
+    var s = Math.floor(xc/1000%24)
+    s = jo(s)
+    //console.log(days+"天")
+    //console.log(h+"时")
+    //console.log(m+"分")
+    //console.log(s+"秒");
 
-          <!--date-->
-          
-            <p class="post-time">猫的故事 &nbsp &nbsp 发布于:<time datetime="2018-04-05T12:42:45.000Z">
-              2018-04-05
-            </time>
-            </p>
-          
 
-          <!--tags-->
+    var x = data.getDay();
+var n = 0
+//console.log(weekday[data.getDay()])
+//console.log(data.getDay())
+for(var i = 1 ; i<=days;i++){
+    //console.log(weekday[x])
+    x = x+1;
+    if(x==7)
+    {
+        x=0;
+        n++
+        //console.log(n)
+    }
+    if(x==0){
+        n++;
+        //console.log(n)
+    }
 
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiang/">qiang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/星星连线/">星星连线</a></li></ul>
-            
-          <!--分类-->
 
-          分类:
-            
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/canvas/">canvas</a></li></ul>
-            
+}
+console.log(days-n)
+var zx = days-n
+a.innerHTML="距离毕业还有:"+days+"天"+h+"时"+m+"分"+s+"秒";
+f.innerHTML="在校时间剩余:"+zx+"天"
+}
 
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                将浏览器宽度调整为900以下刷新关闭canvas画布
 
-...
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2018/04/05/没有什么不可能的/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-  <nav class="paging">
-    <span class="page-number current">1</span>
+setInterval(function(){
+    time()
+
+},60)
+
+
+function m2(x,n){
+    var a=x
+    for(var i=1;i<n;i++){
+        console.log(i)
+        a = a *x
+    }
+    return a
+}
+//console.log("---------------------------------------------------------")
+function ABS(n){
+    if(n<0){
+        n=n*-1
+    }
+    return n
+}
+
+function jo(a){
+    if(a<10){
+        a = "0"+a
+
+    }
+    return a
+}
+</script>
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2018/04/05/没有什么不可能的/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
 </nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#"><span class="post-toc-number">1.</span> <span class="post-toc-text"> </span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#-1"><span class="post-toc-number">2.</span> <span class="post-toc-text"></span></a></li></ol>
 </div>
-
-
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
   </div>
 </div>
 

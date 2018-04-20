@@ -7,6 +7,7 @@
   <meta name="keywords" content="lincaiqihtml">
   <meta name="description" content="this a personal html">
   
+  
   <title>个人博客</title>
   
     <!-- stylesheets list from config.yml -->
@@ -15,6 +16,7 @@
     
       <link rel="stylesheet" href="/css/main.min.css">
     
+  
   
   <style type="text/css">
       html{
@@ -30,6 +32,9 @@
           url(/fonts/MaterialIcons-Regular.woff) format('woff'),
           url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
       }
+	  #canvas{
+	  	z-index:-1
+	  }
   </style>
 <link rel="shortcut icon" href="/source/favicon.ico">
 </head>
@@ -85,7 +90,7 @@
 
 <ul class="dropdown-menu dropdown" >
     <li class="nav-dropdown-list">
-        <a class="archive-link" href="/archives/2018/04/">四月 2018<span class="archive-count">3</span></a>
+        <a class="archive-link" href="/archives/2018/04/">四月 2018<span class="archive-count">4</span></a>
     </li>
 </ul>
 <!--categories-->
@@ -98,7 +103,7 @@
 
 <ul class="dropdown-menu dropdown" >
     <li class="nav-dropdown-list">
-        <a class="category-link" href="/categories/canvas/">canvas<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/美好/">美好<span class="category-count">1</span></a>
+        <a class="category-link" href="/categories/canvas/">canvas<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/javascript/">javascript<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/美好/">美好<span class="category-count">1</span></a>
     </li>
 </ul>
 <!--tags-->
@@ -140,6 +145,7 @@
 </div>
 
 <div id="content-outer">
+
   <div id="content-inner">
     
 <article id="post">
@@ -191,6 +197,7 @@
 </script>
   </div>
 </div>
+
 <div id="bottom-outer">
   <div id="bottom-inner">
     <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#fff"><i class="material-icons material-up">vertical_align_top</i></div></a>
@@ -292,27 +299,35 @@ Width = document.body.clientWidth;
 hei();//调用函数
 //window.onresize=hei//浏览器发生改变时触发函数；
 function mot(){
-	var pos = document.getElementsByClassName('recent-post-link')
+	//var pos = document.getElementsByClassName('recent-post-link')
+	//var pos =document.getElementsByTagName("body")[0]
+	var pos = document.getElementById('content-inner')
 	//pos[0].style.width=100+'px'
-	var posw = pos[0].clientWidth
-	var posh = pos[0].clientHeight+6
-	//console.log(posh)
+	//var posw = pos[0].clientWidth
+	//var posh = pos[0].clientHeight+6
+	var posw = pos.style.width
+	
+	var posh = pos.style.height+6
+	console.log(posh)
+	console.log(pos)
 	var fragment = document.createDocumentFragment();//节点片段
 	var can  =	document.createElement('canvas')//创建div标签
 	can.id = 'canvas';
 	//can.style.width = "100%";
 	//can.style.height ="250px";
-	can.style.position= "relative"
+	can.style.position= "absolute"
 	can.style.top="3px"
-	//can.style.z-index="2"
-	can.style.background =" rgba(255,255,255,0.1)"
+	can.zIndex="-100"
+	
+	can.style.background =" rgba(255,255,255,0)"
 	fragment.appendChild(can);
 	//document.body.appendChild(can);
-	pos[0].appendChild(can);
+	pos.appendChild(can);
 	var cans = document.getElementById("canvas");
 	var ctx = cans.getContext("2d");
-	cans.width=posw;
-	cans.height=250;
+	widths = document.body.scrollHeight
+	cans.width=widths;
+	cans.height=Height;
 	
 	//window.onresize=hei
 	
