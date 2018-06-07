@@ -1,549 +1,457 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  
-  <meta name="keywords" content="lincaiqihtml">
-  <meta name="description" content="this a personal html">
-  
-  
-  <title>个人博客</title>
-  
-    <!-- stylesheets list from config.yml -->
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
     
-      <link rel="stylesheet" href="/css/materialize.min.css">
     
-      <link rel="stylesheet" href="/css/main.min.css">
     
-  
-  
-  <style type="text/css">
-      html{
-          font-family: sans-serif;
-          font-weight: 300;
-      }
-      @font-face {
-          font-family: 'Material Icons';
-          font-style: normal;
-          font-weight: 400;
-          src: url(/fonts/MaterialIcons-Regular.eot);
-          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
-          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
-          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
-      }
-	  #canvas{
-	  	z-index:-1
-	  }
-  </style>
-<link rel="shortcut icon" href="/source/favicon.ico">
+    <title>归档: 2018 | 个人博客 | 副标题</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="林才淇的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="个人博客">
+<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="林才淇的博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="个人博客">
+<meta name="twitter:description" content="林才淇的博客">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
 </head>
+
 <body>
-<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
-<div id="menu-outer">
-  <div id="menu-inner">
-      <ul id="slide-out" class="side-nav" >
-    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#fff">
-    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
-    <p>猫的故事</p>
-    <div class="nav-link">
+    <div id="loading" class="active"></div>
+    <aside id="menu"   >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">猫的故事</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
-        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect active">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:1755811882@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/tomotoes" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+              <a class="nav2item" data-title="微博" href="https://weibo.com/u/6179399347" target="_blank"title="微博" >
+                <i class="icon icon-lg icon-weibo weibo"></i>
+              </a>
+          
+
+            </div>
         
-        
-        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
-        
-        
-        <a href="mailto:1343461079.com"><div class="link-box email"></div></a>
-        
-        
-        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
-        
-        
-        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+      </ul>
         
     </div>
-    <div class="nav-search">
-        <form id="search-form"> <!-- 搜索框相关 -->
-            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
-            <div class="nav-search-img"><i class="material-icons">search</i></div>
-        </form>
-        <div id="local-search-result"></div> <!-- 搜索结果区 -->
-        <p class='no-result'>无搜索结果</p>
-    </div>
-</div>
-    <!--Homepage-->
-
-<li class="nav-list">
-    <a href="/" target="_self">
-        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
-    </a>
-</li>
-
-<!--archives-->
-
-<li class="nav-list dropdown-btn">
-    <a  class=""  target="_self">
-        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
-    </a>
-</li>
-
-<ul class="dropdown-menu dropdown" >
-    <li class="nav-dropdown-list">
-        <a class="archive-link" href="/archives/2018/06/">六月 2018<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/04/">四月 2018<span class="archive-count">2</span></a>
-    </li>
-</ul>
-<!--categories-->
-
-<li class="nav-list dropdown-btn">
-    <a   class=""  target="_self">
-        <div class="nav-ico"><i class="material-icons">dashboard</i></div><p>分类</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
-    </a>
-</li>
-
-<ul class="dropdown-menu dropdown" >
-    <li class="nav-dropdown-list">
-        <a class="category-link" href="/categories/canvas/">canvas<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/javascript/">javascript<span class="category-count">1</span></a>
-    </li>
-</ul>
-<!--tags-->
-
-<li class="nav-list">
-    <a href="/archives" target="_self">
-        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
-    </a>
-</li>
-
-<!--photo-->
-
-<li class="nav-list">
-    <a href="/photo" class="nopjax" target="_self">
-        <div class="nav-ico"><i class="material-icons">insert_photo</i> </div><p>影集</p>
-    </a>
-</li>
-
-<!--friends-->
-
-<li class="nav-list">
-    <a href="/friends" target="_self">
-        <div class="nav-ico"><i class="material-icons">face</i> </div><p>友链</p>
-    </a>
-</li>
-
-<!--about-->
-
-<li class="nav-list">
-    <a href="/about" target="_self">
-        <div class="nav-ico"><i class="material-icons">copyright</i> </div><p>关于</p>
-    </a>
-</li>
-
-
-</ul>
-
   </div>
-</div>
+ 
+</aside>
 
-<div id="content-outer">
 
-  <div id="content-inner">
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">归档</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header archives-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                    <h1 class="archivestitle">路漫漫其修远兮</h1>
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+<div class="container body-wrap fade">
     
 
+    
+            
+            <h3 class="archive-separator">
+                <i class="icon icon-lg icon-folder-o"></i>&nbsp;&nbsp;
+                2018
+            </h3>
+            <div class="waterfall">
+    
 
-<div class="tags">
+        <article class="archive-article" onclick="location.href='/2018/06/07/hello-world/'">
+    <div class="archive-article-date">
+      
+      <time class="my-post-time">
+        <i class="icon icon-lg icon-file-text-o"></i>
+        &nbsp;
+          06-07
+      </time>
+    </div>
+    <div class="archive-article-inner">
+      
+
+
   
+    <h3 class="post-title" itemprop="name">
+      <a href="/2018/06/07/hello-world/">Hello World</a>
+    </h3>
+  
+
+
+
+      
+    </div>
+  </article>
+
+    
+
+        <article class="archive-article" onclick="location.href='/2018/04/20/毕业倒计时/'">
+    <div class="archive-article-date">
+      
+      <time class="my-post-time">
+        <i class="icon icon-lg icon-file-text-o"></i>
+        &nbsp;
+          04-20
+      </time>
+    </div>
+    <div class="archive-article-inner">
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a href="/2018/04/20/毕业倒计时/">毕业倒计时</a>
+    </h3>
+  
+
+
+
+      
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/倒计时/">倒计时</a></li></ul>
+
+    </div>
+  </article>
+
+    
+
+        <article class="archive-article" onclick="location.href='/2018/04/05/星星/'">
+    <div class="archive-article-date">
+      
+      <time class="my-post-time">
+        <i class="icon icon-lg icon-file-text-o"></i>
+        &nbsp;
+          04-05
+      </time>
+    </div>
+    <div class="archive-article-inner">
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a href="/2018/04/05/星星/">面向对象-星星连线</a>
+    </h3>
+  
+
+
+
+      
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/qiang/">qiang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/星星连线/">星星连线</a></li></ul>
+
+    </div>
+  </article>
+
+    
+    </div>
+
+    
 </div>
 
-<div id="recent-posts">
-  
-      <div class="recent-post-item lazy" style="background-color:#fff"   data-original="/images/random/vateral-6.png"  >
-        <a class="recent-post-link" href="/2018/06/07/hello-world/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2018/06/07/hello-world/" >Hello World</a></p>
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2017
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://yoursite.com">tomotoes.com</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
 
-          <!--date-->
-          
-            <p class="post-time">猫的故事 &nbsp &nbsp 发布于:<time datetime="2018-06-07T03:38:00.289Z">
-              2018-06-07
-            </time>
-            </p>
-          
+        <br/>
 
-          <!--tags-->
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
 
-          标签:
+        <span>
             
-            暂无标签
-            
-          <!--分类-->
-
-          分类:
-            
-            暂无分类
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                Welcome to Hexo! This is your very first post. Check 
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2018/06/07/hello-world/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy" style="background-color:#fff"   data-original="/images/random/vateral-5.png"  >
-        <a class="recent-post-link" href="/2018/04/20/毕业倒计时/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2018/04/20/毕业倒计时/" >毕业倒计时</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">猫的故事 &nbsp &nbsp 发布于:<time datetime="2018-04-20T14:12:36.000Z">
-              2018-04-20
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/倒计时/">倒计时</a></li></ul>
-            
-          <!--分类-->
-
-          分类:
-            
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li></ul>
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                 
-
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2018/04/20/毕业倒计时/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy" style="background-color:#fff"   data-original="/images/random/vateral-1.png"  >
-        <a class="recent-post-link" href="/2018/04/05/星星/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2018/04/05/星星/" >面向对象-星星连线</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">猫的故事 &nbsp &nbsp 发布于:<time datetime="2018-04-05T12:42:45.000Z">
-              2018-04-05
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiang/">qiang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/星星连线/">星星连线</a></li></ul>
-            
-          <!--分类-->
-
-          分类:
-            
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/canvas/">canvas</a></li></ul>
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                将浏览器宽度调整为900以下刷新关闭canvas画布
-
-...
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2018/04/05/星星/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-  <nav class="paging">
-    <span class="page-number current">1</span>
-</nav>
-</div>
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+       访问用户：<span id="busuanzi_value_site_uv"></span>
+    </span>人</i>
+    ·
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+      访问次数：<span id="busuanzi_value_site_pv"></span>
+    </span>次
+    </i>
 
 
+        </span>
+        <br/>
+
+        <span class="license"><a  target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">博客内容遵循 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+    </div>
+</footer>
+
+    </main>
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
-  </div>
-</div>
-
-<div id="bottom-outer">
-  <div id="bottom-inner">
-    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#fff"><i class="material-icons material-up">vertical_align_top</i></div></a>
-
-
-<p >Copyright ©  2017  个人博客</p>
-<p >Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> & Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
-<p style="font-size: 10px" id="footer-times" data-time="1/1/2017 00:00:00"></p>
+<!-- 主题配置脚本 -->
 <script>
-    var beginTime=document.getElementById("footer-times").dataset.time
-    function show_date_time(){
-        var span=document.getElementById("footer-times")
-        window.setTimeout("show_date_time()", 1000);
-        BirthDay=new Date(beginTime);//初始日期
-        today=new Date();
-        timeold=(today.getTime()-BirthDay.getTime());
-        sectimeold=timeold/1000
-        secondsold=Math.floor(sectimeold);
-        msPerDay=24*60*60*1000
-        e_daysold=timeold/msPerDay
-        daysold=Math.floor(e_daysold);
-        e_hrsold=(e_daysold-daysold)*24;
-        hrsold=Math.floor(e_hrsold);
-        e_minsold=(e_hrsold-hrsold)*60;
-        minsold=Math.floor((e_hrsold-hrsold)*60);
-        seconds=Math.floor((e_minsold-minsold)*60);
-        span.innerHTML="本站已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
-    }
-    show_date_time();
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 </script>
 
-  </div>
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
 </div>
-
-<!--影集界面需要的资源-->
-
-
-
-<!-- scripts list from theme config.yml -->
-
-<script src="/js/jquery-3.1.1.min.js"></script>
-
-<script src="/js/materialize.min.js"></script>
-
-<script src="/js/main.min.js"></script>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
 
 
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
 <script>
-    NProgress.start();
-    NProgress.done();
-    lazy();
-    links();
-    window.onpopstate = menu();
-    //pjax操作
-    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
-    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
-        .on('pjax:end', () => {
-            dowmdiv();
-            lazy();
-            toc();
-            links();
-            menu();
-        });
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2017/10/11");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "猫的故事");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
 </script>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-<!----------------------------------华丽的分割线----------------------------------------------------------------->
 
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
 
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"display":{"position":"left","width":50,"height":100},"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
-<script>
-
-
-
-function hei(){//定义函数
-if(window.innerHeight)
-Height=window.innerHeight;
-
-else if((document.body) && (document.body.clientHidth))
-Height = document.body.clientHidth;
-
-if(window.innerWidth)
-Width=window.innerWidth;
-else if((document.body) && (document.body.clientWidth))
-Width = document.body.clientWidth;
-	console.log(Width)
-	if(Width>=900)
-	{
-		mot()	
-	}else{
-		//clran(mot)
-	}
-	
-	
-}
-hei();//调用函数
-//window.onresize=hei//浏览器发生改变时触发函数；
-function mot(){
-	//var pos = document.getElementsByClassName('recent-post-link')
-	//var pos =document.getElementsByTagName("body")[0]
-	var pos = document.getElementById('content-inner')
-	//pos[0].style.width=100+'px'
-	//var posw = pos[0].clientWidth
-	//var posh = pos[0].clientHeight+6
-	var posw = pos.style.width
-	
-	var posh = pos.style.height+6
-	console.log(posh)
-	console.log(pos)
-	var fragment = document.createDocumentFragment();//节点片段
-	var can  =	document.createElement('canvas')//创建div标签
-	can.id = 'canvas';
-	//can.style.width = "100%";
-	//can.style.height ="250px";
-	can.style.position= "absolute"
-	can.style.top="3px"
-	can.zIndex="-100"
-	
-	can.style.background =" rgba(255,255,255,0)"
-	fragment.appendChild(can);
-	//document.body.appendChild(can);
-	pos.appendChild(can);
-	var cans = document.getElementById("canvas");
-	var ctx = cans.getContext("2d");
-	widths = document.body.scrollHeight
-	cans.width=widths;
-	cans.height=Height;
-	
-	//window.onresize=hei
-	
-	
-	
-	function ball(){
-	
-	 this.x = randomNum(3, canvas.width - 3);  
-     this.y = randomNum(3, canvas.height - 3);  
-     this.r = randomNum(1, 3); 
-	 this.color = randomColor();  
-     this.speedX = randomNum(-3, 3) * 0.2;  
-     this.speedY = randomNum(-3, 3) * 0.2;   
-}
-ball.prototype={
-	draw:function(){
-		ctx.beginPath();  
-		ctx.globalAlpha = 1;
-		ctx.fillStyle = this.color; 
-		ctx.shadowBlur=10;
-		ctx.shadowColor="#FF6600";
-		ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);  
-		ctx.fill();  
-
-	},
-	move: function() {  
-                    this.x += this.speedX;  
-                    this.y += this.speedY;  
-                     
-                    if (this.x <= 3 || this.x > canvas.width - 3) {  
-                        this.speedX *= -1;  
-                    }  
-                    if (this.y <= 3 || this.y >= canvas.height - 3) {  
-                        this.speedY *= -1;  
-                    }  
-                }  
-
-}
- var balls = [];  
-
-
-for (var i = 0; i < 50; i++) {  
-            var boll = new ball();
-			//console.log(boll.draw)
-           balls.push(boll);
-			//console.log(balls.length)  
-        }  
-main()
-function main() {  
-            ctx.clearRect(0, 0, canvas.width, canvas.height);  
-                     
-            mouseLine();  
-        
-            drawLine();  
-             
-            window.requestAnimationFrame(main);  
-        }  
-
-        var mouseX;  
-        var mouseY;  
-       
-			document.addEventListener("mousemove",function(e){
-				var ev = event || e;  
-				
-                mouseX = ev.offsetX;  
-                mouseY = ev.offsetY;
-				//console.log(mouseX) 
-			})
-			//drawLine() 
-function drawLine(){
-		for(var i = 0; i<balls.length;i++){
-			balls[i].draw()
-			balls[i].move(); 
-			//console.log(i+"只是i") 
-			  for (var j = 0; j < balls.length; j++) {  
-			  	if(i != j){//反//Math.sqrt()平方根  Math.pow(4,3)//(4*4*4)
-					//console.log(j+"只是j") 
-					 if (Math.sqrt(Math.pow((balls[i].x - balls[j].x), 2) + Math.pow((balls[i].y - balls[j].y), 2)) < 80){ //平方根 
-                            ctx.beginPath();  
-                            ctx.moveTo(balls[i].x, balls[i].y);//moveTo()从x,y 点绘制到lineTo()点x,y绘制线
-                            ctx.lineTo(balls[j].x, balls[j].y);  
-                            ctx.strokeStyle = "white";  //颜色
-                            ctx.globalAlpha = 0.2;  //透明度
-                            ctx.stroke();  
-				}  
-			}  
-		}  
-	}  
-        
-}
-
-
-function mouseLine() {  
-            for (var i = 0; i < balls.length; i++) {  
-                if (Math.sqrt(Math.pow((balls[i].x - mouseX), 2) + Math.pow((balls[i].y - mouseY), 2)) < 80) {  
-                    ctx.beginPath();  
-                    ctx.moveTo(balls[i].x, balls[i].y);  
-                    ctx.lineTo(mouseX, mouseY);  
-                    ctx.strokeStyle = "white";  
-                    ctx.globalAlpha = 0.8;  
-                    ctx.stroke();  
-                }  
-            }  
-        }  
-
-
-
-console.log(Math.sqrt(2000))
-
-
-
-function randomNum(m,n){
-//Math.random() * (n - m + 1) + m);
-	return Math.floor(Math.random()*(n-m+1)+m)//Math.floor()向下取整
-}
-function randomColor() {  
-            return "rgb(" + randomNum(0, 255) + "," + randomNum(0, 255) + "," + randomNum(0, 255) + ")";  
-        } 
-}	
-	
-</script>
-
 </html>
