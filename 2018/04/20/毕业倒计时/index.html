@@ -211,11 +211,12 @@ function time(){
     var h = Math.floor(xc/1000/60/60%24)
     var m = Math.floor(xc/1000/60%60)
     var s = Math.floor(xc/1000%24)
+    s=ABS(s)
     s = jo(s)
     //console.log(days+"天")
     //console.log(h+"时")
     //console.log(m+"分")
-    //console.log(s+"秒");
+    console.log(s+"秒");
 
 
     var x = data.getDay();
@@ -238,13 +239,17 @@ for(var i = 1 ; i<=days;i++){
 
 
 }
-console.log(days-n)
+//console.log(days-n)
 var zx = days-n
+//console.log(s)
 a.innerHTML="距离毕业还有:"+days+"天"+h+"时"+m+"分"+s+"秒";
-f.innerHTML="在校时间剩余:"+zx+"天"
+f.innerHTML="毕业已经过去"+ABS(days)+"天"+ABS(h)+"时"+ABS(m)+"分"+ABS(s)+"秒";//在校时间剩余:
+//console.log(ABS(days)+"最新")
 }
 
-
+function ABS(time){
+    return time*-1
+}
 setInterval(function(){
     time()
 
@@ -254,7 +259,7 @@ setInterval(function(){
 function m2(x,n){
     var a=x
     for(var i=1;i<n;i++){
-        console.log(i)
+        //console.log(i)
         a = a *x
     }
     return a
@@ -343,7 +348,7 @@ function jo(a){
     <a title="林才淇的博客">林才淇的博客</a>
     
     <div class="count">
-        <a class="count articles"><span>3</span>文章</a>
+        <a class="count articles"><span>4</span>文章</a>
         <a class="count tags"><span>3</span>标签</a>
         <a class="count categories"><span>2</span>分类</a>
     </div>
@@ -357,7 +362,7 @@ function jo(a){
 <script>
     (function (window) {
         window.musicModule = {}
-        window.musicModule.musicConfig = '{"narrow":false,"autoplay":false,"showlrc":3,"theme":"#b7daff","mutex":true,"mode":"circulation","preload":"auto","listmaxheight":"513px","music":[{"title":"我的梦+Undo（Cover 吴映香）","author":"郁一凡","url":"http://m10.music.126.net/20180607151828/3fba14516f098edfc7586629647de70f/ymusic/d93c/b088/cb55/ca1a764940c4e0ece34a7965d032cca9.mp3","lrc":"https://lincaiqihtml.github.io/images/我的梦.lrc","pic":"http://p1.music.126.net/D1PFNVikCj3RV2ooivIYJg==/109951163117532439.jpg?param=130y130"},{"title":"Something Just Like This","author":"Alex Goot / Madilyn Bailey","url":"http://m10.music.126.net/20180607170146/07bbaf26ca791ad344c1a72f72435aa6/ymusic/44ac/982d/49e3/7c90346c7fd2535810466bba8339a030.mp3","lrc":"https://lincaiqihtml.github.io/images/Something Just Like This.lrc","pic":"http://p1.music.126.net/20g0Kj2jVbV417M-QzcY7w==/18789554208920076.jpg?param=130y130).jpg"},{"title":"心做し（Cover GUMI）","author":"双笙","url":"http://m10.music.126.net/20180607170320/d4c8e114dccf13e3582bc7a5d5e698b1/ymusic/8d9e/75eb/2d6f/76af90b7ba141b65b180d07447144757.mp3","lrc":"https://lincaiqihtml.github.io/images/心做し.lrc","pic":"http://p1.music.126.net/uwF73BxhvWiR-Kxn0wGe0g==/109951162927951204.jpg?param=130y130"},{"title":"深海少女","author":"nero / ゆう十","url":"http://m10.music.126.net/20180607153407/a0551e12cd44eea6793c1630c956bf8a/ymusic/9ca3/1df1/2339/98655f35281f998acff5a85ef460c895.mp3","lrc":"https://lincaiqihtml.github.io/images/深海少女.lrc","pic":"http://p1.music.126.net/tpqIHupzaqlFaHawnUYlOA==/18722483998223156.jpg?param=130y130"}]}'
+        window.musicModule.musicConfig = '{"narrow":false,"autoplay":false,"showlrc":3,"theme":"#b7daff","mutex":true,"mode":"circulation","preload":"auto","listmaxheight":"513px","music":[{"title":"我的梦+Undo（Cover 吴映香）","author":"郁一凡","url":"http://m10.music.126.net/20180607225557/3a2b7647677eb6d4344bfdd96c37fa60/ymusic/d93c/b088/cb55/ca1a764940c4e0ece34a7965d032cca9.mp3","lrc":"https://lincaiqihtml.github.io/images/我的梦.lrc","pic":"http://p1.music.126.net/D1PFNVikCj3RV2ooivIYJg==/109951163117532439.jpg?param=130y130"},{"title":"Something Just Like This","author":"Alex Goot / Madilyn Bailey","url":"http://m10.music.126.net/20180607170146/07bbaf26ca791ad344c1a72f72435aa6/ymusic/44ac/982d/49e3/7c90346c7fd2535810466bba8339a030.mp3","lrc":"https://lincaiqihtml.github.io/images/Something Just Like This.lrc","pic":"http://p1.music.126.net/20g0Kj2jVbV417M-QzcY7w==/18789554208920076.jpg?param=130y130).jpg"},{"title":"心做し（Cover GUMI）","author":"双笙","url":"http://m10.music.126.net/20180607170320/d4c8e114dccf13e3582bc7a5d5e698b1/ymusic/8d9e/75eb/2d6f/76af90b7ba141b65b180d07447144757.mp3","lrc":"https://lincaiqihtml.github.io/images/心做し.lrc","pic":"http://p1.music.126.net/uwF73BxhvWiR-Kxn0wGe0g==/109951162927951204.jpg?param=130y130"},{"title":"深海少女","author":"nero / ゆう十","url":"http://m10.music.126.net/20180607153407/a0551e12cd44eea6793c1630c956bf8a/ymusic/9ca3/1df1/2339/98655f35281f998acff5a85ef460c895.mp3","lrc":"https://lincaiqihtml.github.io/images/深海少女.lrc","pic":"http://p1.music.126.net/tpqIHupzaqlFaHawnUYlOA==/18722483998223156.jpg?param=130y130"}]}'
         window.musicModule.lrcConfig = {
             open: '开启歌词',
             close: '关闭歌词'
@@ -382,7 +387,7 @@ function jo(a){
                     <span>1</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/06/07/hello-world/" title="Hello World">Hello World</a>
+                    <a href="/2018/06/07/简历/" title="简历">简历</a>
                 </p>
             </div>
             
@@ -396,7 +401,7 @@ function jo(a){
                     <span>2</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/04/20/毕业倒计时/" title="毕业倒计时">毕业倒计时</a>
+                    <a href="/2018/06/07/hello-world/" title="Hello World">Hello World</a>
                 </p>
             </div>
         </li>
@@ -407,6 +412,19 @@ function jo(a){
             <div class="normal">
                 <p class="index">
                     <span>3</span>
+                </p>
+                <p class="title">
+                    <a href="/2018/04/20/毕业倒计时/" title="毕业倒计时">毕业倒计时</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>4</span>
                 </p>
                 <p class="title">
                     <a href="/2018/04/05/星星/" title="面向对象-星星连线">面向对象-星星连线</a>
@@ -432,7 +450,7 @@ function jo(a){
         </div>
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/categories/javascript/">#javascript</a>
         </div>
         
@@ -453,12 +471,12 @@ function jo(a){
         </div>
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/tags/qiang/">#qiang</a>
         </div>
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/tags/倒计时/">#倒计时</a>
         </div>
         
