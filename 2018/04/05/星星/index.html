@@ -59,6 +59,11 @@
     
 </head>
 <body>
+<style>
+.cube-article{
+	height:300px
+}
+</style>
 <div class="cube-body">
     <nav id="cube-top-memu" class="cube-menu">
     <ul class="cube-menu-collapse">
@@ -183,9 +188,12 @@
     
     <div class="cube-article-content cube-markdown">
         
-        <p>将浏览器宽度调整为900以下刷新关闭canvas画布</p>
+        <p><br><br>var can = document.getElementById(“canvas”);<br>var ctx = can.getContext(“2d”);<br><br>var w = window.innerWidth, h = window.innerHeight;<br>can.width = w;<br>    can.height = h;<br>window.onresize = function(){<br>    can.width = 1920;<br>    can.height = 1080<br>}<br>//ball()<br>function ball(){<br><br>     this.x = randomNum(3, w-3);<br>     this.y = randomNum(3, canvas.height - 3);<br>     this.r = randomNum(1, 3);<br>     this.color = randomColor();<br>     this.speedX = randomNum(-3, 3) <em> 0.2;<br>     this.speedY = randomNum(-3, 3) </em> 0.2;<br>}<br>ball.prototype={<br>    draw:function(){<br>        ctx.beginPath();<br>        ctx.globalAlpha = 1;<br>        ctx.fillStyle = this.color;<br>        ctx.arc(this.x, this.y, this.r, 0, Math.PI <em> 2);<br>        ctx.fill();<br><br>    },<br>    move: function() {<br>                    this.x += this.speedX;<br>                    this.y += this.speedY;<br><br>                    if (this.x &lt;= 3 || this.x &gt; canvas.width - 3) {<br>                        this.speedX </em>= -1;<br>                    }<br>                    if (this.y &lt;= 3 || this.y &gt;= canvas.height - 3) {<br>                        this.speedY <em>= -1;<br>                    }<br>                }<br><br>}<br> var balls = [];<br><br><br>for (var i = 0; i &lt; 150; i++) {<br>            var boll = new ball();<br>            //console.log(boll.draw)<br>           balls.push(boll);<br>          // console.log(balls[i].x)<br>            //console.log(balls.length)<br>        }<br>main()<br>// console.log(balls[0].x)<br>function main() {<br>            ctx.clearRect(0, 0, canvas.width, canvas.height);<br><br>            mouseLine();<br><br>            drawLine();<br><br>            window.requestAnimationFrame(main);<br>        }<br><br>        var mouseX;<br>        var mouseY;<br>        canvas.onmousemove = function(e) {  //鼠标移动<br>                var ev = event || e;<br><br>                mouseX = ev.offsetX;<br>                mouseY = ev.offsetY;<br>            }<br>            //drawLine()<br>function drawLine(){<br>        for(var i = 0; i&lt;balls.length;i++){<br>            balls[i].draw()<br>            balls[i].move();<br>             //console.log(balls[i].y)<br>              for (var j = 0; j &lt; balls.length; j++) {<br>                  if(i != j){//反//Math.sqrt()平方根  Math.pow(4,3)//(4</em>4<em>4)<br>                    //console.log(j+”只是j”)<br>                     if (Math.sqrt(Math.pow((balls[i].x - balls[j].x), 2) + Math.pow((balls[i].y - balls[j].y), 2)) &lt; 80){ //平方根<br><br>                            ctx.beginPath();<br>                            ctx.moveTo(balls[i].x, balls[i].y);//moveTo()从x,y 点绘制到lineTo()点x,y绘制线<br>                            ctx.lineTo(balls[j].x, balls[j].y);<br>                            ctx.strokeStyle = “white”;  //颜色<br>                            ctx.globalAlpha = 0.2;  //透明度<br>                            ctx.stroke();<br><br><br><br>                }<br>                /</em> if (Math.sqrt(Math.pow((balls[i].x - balls[j].x), 2) + Math.pow((balls[i].y - balls[j].y), 2)) &lt; 80){<br>                     arra()<br>                 } <em>/<br>            }<br>        }<br>    }<br><br>}<br><br><br>function mouseLine() {<br>            for (var i = 0; i &lt; balls.length; i++) {<br>                if (Math.sqrt(Math.pow((balls[i].x - mouseX), 2) + Math.pow((balls[i].y - mouseY), 2)) &lt; 80) {<br>                    ctx.beginPath();<br>                    ctx.moveTo(balls[i].x, balls[i].y);<br>                    ctx.lineTo(mouseX, mouseY);<br>                    ctx.strokeStyle = “white”;<br>                    ctx.globalAlpha = 0.8;<br>                    ctx.stroke();<br><br><br><br>                }<br>            }<br>        }<br><br><br><br>//console.log(Math.sqrt(2000))<br><br><br>var ax = 0<br>function randomNum(m,n){<br>//Math.random() </em> (n - m + 1) + m);<br>    return Math.floor(Math.random()<em>(n-m+1)+m)//Math.floor()向下取整<br>}<br>function randomColor() {<br>            return “rgb(“ + randomNum(0, 255) + “,” + randomNum(0, 255) + “,” + randomNum(0, 255) + “)”;<br>        }<br><br> arra()<br>function arra(){<br>    addEventListener(“mousemove”,function(e){<br>            console.log(“x:”+e.offsetX)<br>            if(e.offsetX&gt;ax){<br>                //console.log(“右边”)<br>                for(var ii = 0; ii&lt;balls.length;ii++){<br><br>                      if (Math.sqrt(Math.pow((balls[ii].x - e.offsetX), 2) + Math.pow((balls[ii].y - e.offsetY), 2)) &lt; 280) {<br>                            balls[ii].x= balls[ii].x+randomNum(1,3)</em>0.6<br>                        }<br><br>                }<br>            }else{<br>                //console.log(“左边”)<br>                for(var ia = 0; ia&lt;balls.length;ia++){<br>                    if (Math.sqrt(Math.pow((balls[ia].x - e.offsetX), 2) + Math.pow((balls[ia].y - e.offsetY), 2)) &lt; 280) {<br>                            balls[ia].x= balls[ia].x-randomNum(1,3)*0.6<br>                        }<br>                }<br>            }<br>            ax=e.offsetX<br><br><br>        })<br>}<br></p>
+
+
+
+
 <p><br></p>
-<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <script>
 0000000000000000000000000000000000000000000000000000000000000000
 /*var pos = document.getElementsByClassName('post-page-title')
@@ -356,12 +364,12 @@
         
         
         <div class="cube-box ">
-            <a href="/categories/javascript/">#javascript</a>
+            <a href="/categories/canvas/">#canvas</a>
         </div>
         
         
-        <div class="cube-box-bg ">
-            <a href="/categories/canvas/">#canvas</a>
+        <div class="cube-box ">
+            <a href="/categories/javascript/">#javascript</a>
         </div>
         
     </div>
@@ -376,11 +384,6 @@
     <div class="cube-boxs">
         
         
-        <div class="cube-box-bg ">
-            <a href="/tags/倒计时/">#倒计时</a>
-        </div>
-        
-        
         <div class="cube-box ">
             <a href="/tags/星星连线/">#星星连线</a>
         </div>
@@ -388,6 +391,11 @@
         
         <div class="cube-box ">
             <a href="/tags/qiang/">#qiang</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/倒计时/">#倒计时</a>
         </div>
         
     </div>
