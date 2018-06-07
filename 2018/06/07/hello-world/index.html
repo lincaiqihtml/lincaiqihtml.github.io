@@ -149,104 +149,26 @@
   <div id="content-inner">
     
 <article id="post">
-  <div class="post-page-title" style="background-color:#fff;background-image:url(/images/random/vateral-5.png)" >
-  <h2>毕业倒计时</h2>
+  <div class="post-page-title" style="background-color:#fff;background-image:url(/images/random/vateral-6.png)" >
+  <h2>Hello World</h2>
     
-  <p>作者:猫的故事 &nbsp&nbsp 发布于:<time datetime="2018-04-20T14:12:36.000Z">
-          2018-04-20
+  <p>作者:猫的故事 &nbsp&nbsp 发布于:<time datetime="2018-06-07T03:38:00.289Z">
+          2018-06-07
     </time>
   </p>
     
   </div>
   <div class="post-page-content">
-  <h3 id=""><a href="#" class="headerlink" title=" "></a><div id="s" style="width:100%;height:30px;border:#ccc solid 0px; text-align:center"> </div></h3><p><br></p>
-<h3 id="-1"><a href="#-1" class="headerlink" title=""></a><div id="f" style="width:100%;height:30px;border:#ccc solid 0px; text-align:center"></div></h3><p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<script>
-var a = document.getElementById("s")
-var f = document.getElementById("f")
-var weekday=new Array(7)
-weekday[0]="星期日"
-weekday[1]="星期一"
-weekday[2]="星期二"
-weekday[3]="星期三"
-weekday[4]="星期四"
-weekday[5]="星期五"
-weekday[6]="星期六"
-function time(){
-    var data = new Date();
-    var todata = new Date("2018/05/25");
-    //console.log("现在:"+data)
-    //console.log("未来:"+todata)
-    data.setTime(data.getTime()+250)//时间缀
-    var xc = todata-data
-    var days = Math.floor(xc/1000/60/60/24)
-    var h = Math.floor(xc/1000/60/60%24)
-    var m = Math.floor(xc/1000/60%60)
-    var s = Math.floor(xc/1000%24)
-    s = jo(s)
-    //console.log(days+"天")
-    //console.log(h+"时")
-    //console.log(m+"分")
-    //console.log(s+"秒");
+  <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">good</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><hr>
 
-
-    var x = data.getDay();
-var n = 0
-//console.log(weekday[data.getDay()])
-//console.log(data.getDay())
-for(var i = 1 ; i<=days;i++){
-    //console.log(weekday[x])
-    x = x+1;
-    if(x==7)
-    {
-        x=0;
-        n++
-        //console.log(n)
-    }
-    if(x==0){
-        n++;
-        //console.log(n)
-    }
-
-
-}
-console.log(days-n)
-var zx = days-n
-a.innerHTML="距离毕业还有:"+days+"天"+h+"时"+m+"分"+s+"秒";
-f.innerHTML="在校时间剩余:"+zx+"天"
-}
-
-
-setInterval(function(){
-    time()
-
-},60)
-
-
-function m2(x,n){
-    var a=x
-    for(var i=1;i<n;i++){
-        console.log(i)
-        a = a *x
-    }
-    return a
-}
-//console.log("---------------------------------------------------------")
-function ABS(n){
-    if(n<0){
-        n=n*-1
-    }
-    return n
-}
-
-function jo(a){
-    if(a<10){
-        a = "0"+a
-
-    }
-    return a
-}
-</script>
   </div>
   <!--评论块-->
     
@@ -255,15 +177,11 @@ function jo(a){
 <nav class="post-nav">
   <!-- Prev Nav -->
     
-  <a href="/2018/06/07/hello-world/" id="post_nav-newer" class="post-nav-content prev-content">
-      新篇
-  </a>
-    
 
 
   <!-- Next Nav -->
     
-  <a href="/2018/04/05/星星/" id="post_nav-older" class="post-nav-content next-content">
+  <a href="/2018/04/20/毕业倒计时/" id="post_nav-older" class="post-nav-content next-content">
       旧篇
   </a>
     
@@ -271,7 +189,7 @@ function jo(a){
 <div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
 <div class="post-toc-none"><p>(无)</p></div>
 <div class="post-toc-box">
-    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#"><span class="post-toc-number">1.</span> <span class="post-toc-text"> </span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#-1"><span class="post-toc-number">2.</span> <span class="post-toc-text"></span></a></li></ol>
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
 </div>
 <!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
 <script type="text/javascript">
