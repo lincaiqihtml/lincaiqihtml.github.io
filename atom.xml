@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>个人博客</title>
+  
+  <subtitle>副标题</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-04-05T10:36:04.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>猫的故事</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/06/07/hello-world/"/>
+    <id>http://yoursite.com/2018/06/07/hello-world/</id>
+    <published>2018-06-07T03:38:00.289Z</published>
+    <updated>2018-04-05T10:36:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">good</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>毕业倒计时</title>
+    <link href="http://yoursite.com/2018/04/20/%E6%AF%95%E4%B8%9A%E5%80%92%E8%AE%A1%E6%97%B6/"/>
+    <id>http://yoursite.com/2018/04/20/毕业倒计时/</id>
+    <published>2018-04-20T14:12:36.000Z</published>
+    <updated>2018-05-01T02:57:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id=""><a href="#" class="headerlink" title=" "></a><div id="s" style="width:100%;height:30px;border:#ccc solid 0px; text-align:center"> </div></h3><p><br></p><h3 id="-1"><a href="#-1" class="headerlink" title=""></a><div id="f" style="width:100%;height:30px;border:#ccc solid 0px; text-align:center"></div></h3><p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p><script>var a = document.getElementById("s")var f = document.getElementById("f")var weekday=new Array(7)weekday[0]="星期日"weekday[1]="星期一"weekday[2]="星期二"weekday[3]="星期三"weekday[4]="星期四"weekday[5]="星期五"weekday[6]="星期六"function time(){    var data = new Date();    var todata = new Date("2018/05/25");    //console.log("现在:"+data)    //console.log("未来:"+todata)    data.setTime(data.getTime()+250)//时间缀    var xc = todata-data    var days = Math.floor(xc/1000/60/60/24)    var h = Math.floor(xc/1000/60/60%24)    var m = Math.floor(xc/1000/60%60)    var s = Math.floor(xc/1000%24)    s = jo(s)    //console.log(days+"天")    //console.log(h+"时")    //console.log(m+"分")    //console.log(s+"秒");    var x = data.getDay();var n = 0//console.log(weekday[data.getDay()])//console.log(data.getDay())for(var i = 1 ; i<=days;i++){    //console.log(weekday[x])    x = x+1;    if(x==7)    {        x=0;        n++        //console.log(n)    }    if(x==0){        n++;        //console.log(n)    }}console.log(days-n)var zx = days-na.innerHTML="距离毕业还有:"+days+"天"+h+"时"+m+"分"+s+"秒";f.innerHTML="在校时间剩余:"+zx+"天"}setInterval(function(){    time()},60)function m2(x,n){    var a=x    for(var i=1;i<n;i++){        console.log(i)        a = a *x    }    return a}//console.log("---------------------------------------------------------")function ABS(n){    if(n<0){        n=n*-1    }    return n}function jo(a){    if(a<10){        a = "0"+a    }    return a}</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt;&lt;div id=&quot;s&quot; style=&quot;width:100%;height:30px;border:#ccc solid 0px; text-align:center&quot;&gt; 
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="倒计时" scheme="http://yoursite.com/tags/%E5%80%92%E8%AE%A1%E6%97%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面向对象-星星连线</title>
+    <link href="http://yoursite.com/2018/04/05/%E6%98%9F%E6%98%9F/"/>
+    <id>http://yoursite.com/2018/04/05/星星/</id>
+    <published>2018-04-05T12:42:45.000Z</published>
+    <updated>2018-04-05T15:27:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>将浏览器宽度调整为900以下刷新关闭canvas画布</p><p><br></p><p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p><script>0000000000000000000000000000000000000000000000000000000000000000/*var pos = document.getElementsByClassName('post-page-title')    //pos[0].style.width=100+'px'    //var posw = pos[0].clientWidth    //var posh = pos[0].clientHeight+6    //console.log(posh)    var fragment = document.createDocumentFragment();//节点片段    var can  =    document.createElement('canvas')//创建div标签    can.className = 'balloon';    can.style.width = "100%";    can.style.height ="100%";    can.style.position= "relative"    can.style.top="3px"    can.style.background = "#000"    fragment.appendChild(can);    //document.body.appendChild(can);    pos[0].appendChild(can);    */</script><p>12121</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;将浏览器宽度调整为900以下刷新关闭canvas画布&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br
+      
+    
+    </summary>
+    
+      <category term="canvas" scheme="http://yoursite.com/categories/canvas/"/>
+    
+    
+      <category term="星星连线" scheme="http://yoursite.com/tags/%E6%98%9F%E6%98%9F%E8%BF%9E%E7%BA%BF/"/>
+    
+      <category term="qiang" scheme="http://yoursite.com/tags/qiang/"/>
+    
+  </entry>
+  
+</feed>
