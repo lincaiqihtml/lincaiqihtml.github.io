@@ -360,12 +360,12 @@
     <div class="cube-boxs">
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/categories/javascript/">#javascript</a>
         </div>
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/categories/canvas/">#canvas</a>
         </div>
         
@@ -382,21 +382,21 @@
         
         
         <div class="cube-box ">
-            <a href="/tags/倒计时/">#倒计时</a>
-        </div>
-        
-        
-        <div class="cube-box-bg ">
             <a href="/tags/优美句子/">#优美句子</a>
         </div>
         
         
-        <div class="cube-box-bg ">
-            <a href="/tags/星星连线/">#星星连线</a>
+        <div class="cube-box ">
+            <a href="/tags/倒计时/">#倒计时</a>
         </div>
         
         
         <div class="cube-box ">
+            <a href="/tags/星星连线/">#星星连线</a>
+        </div>
+        
+        
+        <div class="cube-box-bg ">
             <a href="/tags/qiang/">#qiang</a>
         </div>
         
@@ -491,4 +491,35 @@ Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a
 <!-- endinject -->
 <div class="cube-loading out"></div>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"display":{"position":"right","width":50,"height":100},"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
+
+<script>
+var bq= document.getElementsByClassName('cube-markdown blockquote')
+	bq =document.getElementsByTagName("style")[0]
+	//bqs = bq.append(".cube-markdown blockquote{padding:10px;10px;10px; border-left:0}")
+console.log(bq)
+
+function hei(){//定义函数
+if(window.innerHeight)
+Height=window.innerHeight;
+else if((document.body) && (document.body.clientHidth))
+Height = document.body.clientHidth;
+
+if(window.innerWidth)
+Width=window.innerWidth;
+else if((document.body) && (document.body.clientWidth))
+Width = document.body.clientWidth;
+	console.log(Width)
+	if(Width>=900)
+	{
+		bq.append(".cube-markdown blockquote{padding:10px;10px;40px; border-left:5px solid}")
+	}else{
+		//clran(mot)
+		bq.append(".cube-markdown blockquote{padding:10px;10px;10px; border-left:0}")
+	}
+	
+	
+}
+hei()
+window.onresize=hei
+</script>
 </html>
