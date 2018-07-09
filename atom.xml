@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-14T17:21:35.742Z</updated>
+  <updated>2018-07-09T14:16:36.384Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>双11海报教程</title>
+    <link href="http://yoursite.com/2018/07/09/%E5%8F%8C11%E6%B5%B7%E6%8A%A5%E6%95%99%E7%A8%8B/"/>
+    <id>http://yoursite.com/2018/07/09/双11海报教程/</id>
+    <published>2018-07-09T13:59:54.000Z</published>
+    <updated>2018-07-09T14:16:36.384Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/ps/shuang11/shuang11_1.png"><br><a href="http://www.16xx8.com/photoshop/jiaocheng/2014/135026.html" target="_blank" rel="noopener">原教程地址</a><br><img src="/images/ps/shuang11/two11.jpg"><br><a style="float:right" href="/images/ps/shuang11/11.psd">自作品下载psd</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/ps/shuang11/shuang11_1.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;http://www.16xx8.com/photoshop/jiaocheng/2014/135026.html&quot; target=&quot;_blank&quot; rel
+      
+    
+    </summary>
+    
+      <category term="canvas" scheme="http://yoursite.com/categories/canvas/"/>
+    
+    
+      <category term="双11海报教程" scheme="http://yoursite.com/tags/%E5%8F%8C11%E6%B5%B7%E6%8A%A5%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="ps教程" scheme="http://yoursite.com/tags/ps%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>有哪些优美的句子</title>
