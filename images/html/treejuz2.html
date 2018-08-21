@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>这个没有标题哦</title>
+	</head>
+	<style type="text/css">
+canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+*{padding:0;margin:0}
+#gb{
+	animation:gb .8s infinite;
+}
+@keyframes gb{
+	0%{opacity:1}
+	100%{opacity:0}
+}
+#te{
+	width:35%;
+	height:100%;
+	border:#999 solid 1px;
+	border-radius:10px;
+	text-align:center;
+	margin:50px auto;
+	line-height:400%;
+	box-shadow:5px 2px 19px -9px #666;
+	font-family: "楷体"
+}
+</style>
+	<body bgcolor="#fff" >
+<div id="te">
+<span id="text"></span><span id="gb">|</span>
+</div>
+<canvas id="tree"></canvas>
+<canvas id="flower"></canvas>
+</body>
+<script>
+var tree = document.getElementById("tree");
+tree.width = window.innerWidth;
+tree.height = window.innerHeight ;
+var tCxt = tree.getContext("2d");
+var flower = document.getElementById("flower");
+flower.width = window.innerWidth;
+flower.height = window.innerHeight ;
+var cxt = flower.getContext("2d");
+
+var flowerList = [];//ӣ���б�
+var rootTop = 330 ;//�����
+var flowerColor = "rgba(243,0,27,.8)" ;//��ɫ
+var flowerColorDeep = "#ee2c35" ;//��ɫ��
+var treeColor2 = "rgba(139,100,108,0.8)" ;//��֦��ɫ
+var treeColor = "#492831" ;//������ɫ
+var fallList = [];//Ʈ��ӣ���б�
+var g = 0.01 ;//�������ٶ�
+var gWind = 0.005;//�������ٶ�
+var limitSpeedY = 1;//�ٶ�����
+var limitSpeedX = 1 ;//�ٶ�����
+cxt.shadowColor= "#FFF" ;
+cxt.shadowBlur = 10 ;
+
+function drawTree(x,y,deg,step,type){
+    var deg1 = step%2 == 0 ? 0.15 : -0.1 ;
+    var x1 = x + Math.cos(deg+deg1) * (step+10) * 1 ;//�Բ������ж�֦�ɳ��� x��ƫ�ƴ�һЩ
+    var y1 = y + Math.sin(deg+deg1) * (step-5) * 1 ;//�Բ������ж�֦�ɳ��� Y��ѹ��һЩ
+    tCxt.beginPath();
+    tCxt.lineWidth = step/3;
+    tCxt.moveTo(x,y);
+    tCxt.lineTo(x1,y1);
+    tCxt.strokeStyle = (step > 5 ) ? treeColor : treeColor2 ;//ϸֽ�������ɻ�����ɫ
+    tCxt.stroke();
+    if(step > 20){//�����ཻ��λ���м�϶����һ��Բ���
+        tCxt.fillStyle = treeColor ;
+        tCxt.arc(x,y,step/6,0,Math.PI*2);
+        tCxt.fill();
+    }
+    if(step < 3 || (step < 23 && Math.random() > 0.3)){
+        //ĩ��λ�� ������
+        var color = [flowerColorDeep,flowerColor,flowerColor][Math.round(Math.random()+0.3)] ;
+        var r = 5+Math.random()*1.5
+        tCxt.fillStyle = color ;
+        tCxt.arc(x1+Math.random()*3,y1+Math.random()*3,r,0,Math.PI)
+        tCxt.fill();
+        flowerList.push({x:x,y:y,sx:(Math.random()-0.5),sy:0,color:color,r:r,deg:deg});//�����»�ӣ����λ��
+    }
+    step -- ;
+	if(step > 30){
+        drawTree(x1,y1,deg,step,type);
+       
+        
+    }
+    if(step > 10){
+        drawTree(x1,y1,deg,step,type);
+        if(step%6 == 1 && step > 0 && step < 35)
+            drawTree(x1,y1,deg+0.2 + 0.3 * Math.random(),Math.round(step/1.13));//�ҷֲ�
+        
+    }
+	 if(step%5 == 0 && step > 0 && step < 25)
+            drawTree(x1,y1,deg-0.2 - 0.3 * Math.random(),Math.round(step/1.13));//��ֲ�
+	
+}
+
+drawTree(-16,rootTop,-Math.PI/2,31,3);//ִ��
+var len = flowerList.length ;
+function step(){
+    if(Math.random() > 0.3)    fallList.push(flowerList[Math.floor(Math.random()*len)]);//���ȡ��һ�������긴�Ƶ�Ʈ�仨����б���
+
+    cxt.clearRect(0,0,tree.width,tree.height);
+    for(var i = 0 ;i < fallList.length ; i ++){
+        if(fallList[i].sy < limitSpeedY) fallList[i].sy += g ;
+        fallList[i].sx += gWind ;
+        fallList[i].x += fallList[i].sx ;
+        fallList[i].y += fallList[i].sy ;
+        if(fallList[i].y > window.innerHeight ){//Ʈ������Ļ����Ƴ�
+            fallList.splice(i,1);
+            i -- ;
+            continue ;
+        }
+        cxt.beginPath();
+        cxt.fillStyle = fallList[i].color ;
+        fallList[i].deg += fallList[i].sx*0.05 ;//���ٶ���ص���ת����
+        cxt.arc(fallList[i].x,fallList[i].y,fallList[i].r,fallList[i].deg,fallList[i].deg+Math.PI*1.3);
+        cxt.fill();
+    }
+    requestAnimationFrame(step);
+}
+requestAnimationFrame(step);
+
+
+
+var text=document.getElementById("text");
+var gb = document.getElementById("gb");
+var tet  =  "海明威说:人可以被毁灭,但不可以被打败,也许并不是每个人都能成为人生得大赢家,但是面对失意得人生,请无论如何要淡定得保持风度地活下去,默默无闻也好,平平凡凡也罢,重要的是,一个人只要活着,再怎么样一无所有,也不应该把做人得尊严和风度也输掉"
+tet = tet.split("");
+
+var index = 0;
+dz()
+function dz(){
+	if(tet[index]==","){tet[index]="<br/>"}
+	text.innerHTML+=tet[index];
+	console.log(text.innerHTML)
+	index++;
+	index<tet.length?setTimeout("dz()",60):gb.innerHTML="|"
+	
+}
+</script>
+</html>
