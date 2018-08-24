@@ -1,206 +1,235 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>Bootstrap 101 Template</title>
 
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+		<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+		<!--[if lt IE 9]>
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <style type="text/css">
-  	*{margin: 0; padding: 0;}
-  	.row1{
-  		width:100%;
-  		border: #ccc solid 0px;
-  		margin-left: 10px;
-  		margin-right: 0;
-  		margin-top: 30px;
-  		animation: 1s sq;
-  	}
-  	@keyframes sq
-		{
-			from {margin-top: 50px;}
-			to {margin-top: 30px;}
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
 		}
-  	.row{
-  		border: 0;
-  		width: 0%;
-  	}
-  	.touxiang{
-  		width: 40px;
-  		height: 40px;
-  		
-  		background-image: url("1.jpg");
-  		background-size: 100%;
-  		float: left;
-  	}
-  	.kuang{
-  		
-  		height: 34px;
-  		background: #fff;
-  		border: #fccc solid  0.18rem;;
-  		
-  		float: left;
-  		margin-left: 48px;
-  		margin-top: -20px;
-  		border-radius:4px;
-  		text-align: center;
-  		line-height: 34px;
-  		padding: 0px 5px 0px 6px;
-  		
-  	}
-  	.kuang:after{
-  		position: relative;
-			left:-16px;
-			top:-22px;
+		
+		.row1 {
+			width: 100%;
+			border: #ccc solid 0px;
+			margin-left: 10px;
+			margin-right: 0;
+			margin-top: 30px;
+			animation: 1s sq;
+		}
+		
+		@keyframes sq {
+			from {
+				margin-top: 50px;
+			}
+			to {
+				margin-top: 30px;
+			}
+		}
+		
+		.row {
+			border: 0;
+			width: 0%;
+		}
+		
+		.touxiang {
+			width: 40px;
+			height: 40px;
+			background-image: url("1.jpg");
+			background-size: 100%;
 			float: left;
-			display:block;
-			content:'';
-			border:5px solid transparent;
-			border-right-color:#fff;
-			transform:rotate(0deg);
-			border-radius:0%;
-  	}
-  	.name{
-  		width: 500px;
-  		height: 200px;
-  		float: left;
-  		margin-left: 52px;
-  		margin-top: -5px;
-  		color: #adadad;
-  	}
-  	.dibu{
-  		width: 100%;
-  		height: 50px;
-  		margin-left: 0;
-  		margin-bottom: 0;
-  		position: fixed;
-  		bottom: 0;
-  		background: #f4f4f4;
-  		border: 0;
-  		border-top:1px solid #d8d8d8;
-  	}
-  	.tubiao1{
-  		width:34px;
-  		height: 34px;
-  		position: fixed;
-  		left: 14px;
-  		bottom: 7px;
-  		border: 1px solid #6e7176;
-  		border-radius:50%;
-  		background-image: url("t1.png");
-  		background-size: 100%;
-  		float: left;
-  	}
-  	.tubiao2{
-  		width:34px;
-  		height: 34px;
-  		position: fixed;
-  		right: 14px;
-  		bottom: 7px;
-  		border: 1px solid #6e7176;
-  		border-radius:50%;
-  		background-image: url("t3.png");
-  		background-size: 100%;
-  		float: right;
-  		text-align: center;
-  		line-height: 34px;
-  		color: #fffaff;
-  	}
-  	.tubiao3{
-  		width:34px;
-  		height: 34px;
-  		position: fixed;
-  		right: 60px;
-  		bottom: 7px;
-  		border: 1px solid #6e7176;
-  		border-radius:50%;
-  		background-image: url("t2.png");
-  		background-size: 100%;
-  		float: right;
-  	}
-  	.an{
-  		border:0;
-  		border-bottom: #d8d8d8 solid 1px;
-  		width: 59%;
-  		line-height: 30px;
-  		position: fixed;
-  		left: 50px;
-  		padding: 3px;
-  		height: 20px;
-  		bottom: 7px;
-  		padding:5px 5px 10px 10px;
-  		text-shadow: 0px 0px 0px #000;
-      -webkit-text-fill-color: transparent;
-      background: transparent;
-  		}
-  		
-     .an:focus{
-      border-bottom-color: #68a351;
-      outline: 0;
-      color:#68a351;
-      
-    }
-    #time{
-    	width: 50px;
-    	height: 18px;
-    	background: rgba(212,212,212,0.5);
-    	border-radius:2px;
-    	color:#fff;
-    	text-align: center;
-    	line-height: 18px;
-    	position: absolute;
-    	left: 50%;
-    	margin-left: -25px;
-    	top:25px
-    	
-    }
-    .music{
-    	width: 28px;
-    	height: 28px;
-    	background:#a0e75a ;
-    	border: 1px solid #74be50;
-    	border-radius:50%;
-    	position: relative;
-    	top: 100px;
-    	float: right;
-    	right:6px;
-    	color: #f5f5f5;
-    	font-size: 9px;
-    	text-align: center;
-    	padding-right:2px ;
-    	line-height: 26px;
-    }
-    .music.rotate{
-	-webkit-animation:rot 10s linear infinite;
-			-moz-animation:rot 10s linear infinite;
-			-ms-animation:rot 10s linear infinite;
-			-o-animation:rot 10s linear infinite;
-			animation:rot 10s linear infinite;
-}
-@keyframes rot{
-	from{transform:rotate(0deg);}
-	to{transform:rotate(360deg);}
-}
-  </style>
-  <body style="background: #ebebeb; backface-visibility: hidden;font-family:  src: url("小米兰亭.ttf")>
+		}
+		
+		.kuang {
+			height: 34px;
+			background: #fff;
+			border: #fccc solid 0.18rem;
+			;
+			float: left;
+			margin-left: 48px;
+			margin-top: -20px;
+			border-radius: 4px;
+			text-align: center;
+			line-height: 34px;
+			padding: 1px 6px 1px 6px;
+			white-space:nowrap;
+			font-size: 14px;
+			letter-spacing:1px
+		}
+		
+		.kuang:after {
+			position: relative;
+			left: -16px;
+			top: -22px;
+			float: left;
+			display: block;
+			content: '';
+			border: 5px solid transparent;
+			border-right-color: #fff;
+			transform: rotate(0deg);
+			border-radius: 0%;
+		}
+		
+		.name {
+			width: 100%;
+			height: 20px;
+			float: left;
+			margin-left: 46px;
+			margin-top: 3px;
+			color: #adadad;
+			text-align: center;
+			white-space:nowrap;
+			font-size: 14px;
+		}
+		
+		.dibu {
+			width: 100%;
+			height: 50px;
+			margin-left: 0;
+			margin-bottom: 0;
+			position: fixed;
+			bottom: 0;
+			background: #f4f4f4;
+			border: 0;
+			border-top: 1px solid #d8d8d8;
+		}
+		
+		.tubiao1 {
+			width: 34px;
+			height: 34px;
+			position: fixed;
+			left: 14px;
+			bottom: 7px;
+			border: 1px solid #6e7176;
+			border-radius: 50%;
+			background-image: url("t1.png");
+			background-size: 100%;
+			float: left;
+		}
+		
+		.tubiao2 {
+			width: 34px;
+			height: 34px;
+			position: fixed;
+			right: 14px;
+			bottom: 7px;
+			border: 1px solid #6e7176;
+			border-radius: 50%;
+			background-image: url("t3.png");
+			background-size: 100%;
+			float: right;
+			text-align: center;
+			line-height: 34px;
+			color: #fffaff;
+		}
+		
+		.tubiao3 {
+			width: 34px;
+			height: 34px;
+			position: fixed;
+			right: 60px;
+			bottom: 7px;
+			border: 1px solid #6e7176;
+			border-radius: 50%;
+			background-image: url("t2.png");
+			background-size: 100%;
+			float: right;
+		}
+		
+		.an {
+			border: 0;
+			border-bottom: #d8d8d8 solid 1px;
+			width: 59%;
+			line-height: 35px;
+			position: fixed;
+			left: 50px;
+			padding: 3px;
+			height: 35px;
+			bottom: 7px;
+			padding: 5px 5px 5px 10px;
+			text-shadow: 0px 0px 0px #000;
+			-webkit-text-fill-color: transparent;
+			background: transparent;
+		}
+		
+		.an:focus {
+			border-bottom-color: #68a351;
+			outline: 0;
+			color: #68a351;
+		}
+		
+		#time {
+			width: 50px;
+			height: 18px;
+			background: rgba(212, 212, 212, 0.5);
+			border-radius: 2px;
+			color: #fff;
+			text-align: center;
+			line-height: 18px;
+			position: absolute;
+			left: 50%;
+			margin-left: -25px;
+			top: 25px
+		}
+		
+		.music {
+			width: 28px;
+			height: 28px;
+			background: #a0e75a;
+			border: 1px solid #74be50;
+			border-radius: 50%;
+			position: fixed;
+			top: 100px;
+			float: right;
+			right: 6px;
+			color: #f5f5f5;
+			font-size: 9px;
+			text-align: center;
+			padding-right: 2px;
+			line-height: 26px;
+		}
+		
+		.music.rotate {
+			-webkit-animation: rot 10s linear infinite;
+			-moz-animation: rot 10s linear infinite;
+			-ms-animation: rot 10s linear infinite;
+			-o-animation: rot 10s linear infinite;
+			animation: rot 10s linear infinite;
+		}
+		
+		@keyframes rot {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+	<body style="background: #ebebeb; backface-visibility: hidden;font-family:  src: url(" 小米兰亭.ttf ")>
   	<div id="time">00:00</div>
-  	<div class="music glyphicon glyphicon-music rotate" id="music">
-  		<audio id="musics" src="music.mp3" autoplay="autoplay" loop="loop"></audio>
+  	<div class="music glyphicon glyphicon-music rotate " id="music">
+  		<audio id="musics" src="music.mp3 " autoplay="autoplay " loop="loop "></audio>
   	</div>
-		<div class="row row1 row2" style="margin-top: 50px;">
-			<div class="touxiang"><span class="name ">林才淇</span></div>
-			<div class="kuang glyphicon glyphicon-music">1212</div>
+  	<div class="row row1" style="height: 5px;"></div>
+		<div class="row row1 row2 ">
+			<div class="touxiang "><span class="name ">林某某</span></div>
+			<div class="kuang">错的不是你而是这个世界</div>
 		</div>
 		<div class="row row1" >
 			<div class="touxiang"><span class="name ">simle</span></div>
@@ -219,99 +248,187 @@
 			<div class="kuang">12121</div>
 		</div>
 		<div class="row row1" >
-			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang">12121</div>
+			<div class="touxiang "><span class="name ">simle</span></div>
+			<div class="kuang ">12121</div>
 		</div>
 		<div class="row row1" >
 			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang">12121</div>
+			<div class="kuang ">12121</div>
 		</div>
-		<div class="row row1" >
+		<div class="row row1 " >
 			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang">12121</div>
+			<div class="kuang ">12121</div>
+		</div>
+		<div class="row row1 " >
+			<div class="touxian"><span class="name "></span></div>
+			<div class="kuang "></div>
 		</div>
 		
 		
-		<div class="row dibu">
-			<div class="tubiao1"></div>
-			<input type="text" class="an" id="input" >
-			<div class="tubiao2" id="tubiao2"></div>
-			<div class="tubiao3"></div>
+		<div class="row dibu ">
+			<div class="tubiao1 "></div>
+			<input type="text " class="an " id="input" >
+			<div class="tubiao2 " id="tubiao2"></div>
+			<div class="tubiao3 "></div>
 		</div>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="jquery.min.js"></script>
+    <script src="jquery.min.js "></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js "></script>
     <script>
+window.onload=function (){
     	var Input = document.getElementById("input");
     	var tubiao = document.getElementById("tubiao2");
-    	var Music = document.querySelector("musics")
-    	console.log(Music)
-    	if(Music.paused){
-    		play()
-    	}else{
-    		pause()
-    	}
-    	
+    	var music = document.getElementById("music");
+
     	var ts = tubiao.style
-    	console.log(ts)
     	Input.onkeyup = function(){
     		d()
     	}
     	Input.onclick = function(){
     		//fas()
     	}
-    	function d(){
-	    		if(Input.value == "")
+    	function d(){//发生文字
+	    		if(Input.value == " ")
 	    	{
-	    		ts.width="34px";
-	    		ts.height="34px";
-	    		ts.borderRadius = "50%";
-	    		ts.border="1px solid #6e7176";
-	    		tubiao.innerHTML =""
-	    		ts.background=""
-	    		ts.backgroundImage="url(t3.png)";
-	    		ts.right="14px";
+	    		ts.width="34px ";
+	    		ts.height="34px ";
+	    		ts.borderRadius = "50% ";
+	    		ts.border="1px solid #6e7176 ";
+	    		tubiao.innerHTML =" "
+	    		ts.background=" "
+	    		ts.backgroundImage="url(t3.png) ";
+	    		ts.right="14px ";
 	    	}else{
-	    		ts.right="8px";
-	    		ts.width="46px";
-	    		ts.height="34px";
-	    		ts.background="#1aac19";
-	    		ts.border="1px solid #199b1d";
-	    		ts.borderRadius ="4px";
-	    		tubiao.innerHTML = " 发送"
-	    		
-	    		
+	    		ts.right="8px ";
+	    		ts.width="46px ";
+	    		ts.height="34px ";
+	    		ts.background="#1aac19 ";
+	    		ts.border="1px solid #199b1d ";
+	    		ts.borderRadius ="4px ";
+	    		tubiao.innerHTML = " 发送 "
 	    	}
     	}
-    	Times()
+    	Times()//时间
     	function Times(){
     		Time = document.getElementById("time");
     		da = new Date();
     		var shi = da.getHours();//小时
     		var fen = da.getMinutes();//分钟
-    		var sf = shi+":"+fen;
+    		var sf = shi+":"+jo(fen);
     		Time.innerHTML = sf;
     	}
-    	function play(){
-	$("#musics").get(0).play();
-	$(".music").addClass("rotate")
-}
-  $(function(){
-		$("#music").click(function(){
-			
-			if(Music.paused){
-    		play()
+    function jo(a){
+    	if(a<10){
+    		return a = "0"+a
     	}else{
-    		pause()
+    		a = a
     	}
-			
-		});
-	});  	
-function pause(){
-	$("#musics").get(0).pause();
-	$(".music").removeClass("rotate");
-};
+    	return a;
+    }
+		function play(){//开始播放
+			$("#musics").get(0).play();
+			$(".music").addClass("rotate")
+		}
+		switchMusic()
+		function switchMusic(){
+			var Music = $("#musics").get(0);
+			music.onclick=function(){
+				if(Music.paused){
+	    		play()
+	    	}else{
+	    		pause()
+	    	}
+			}
+		}
+			function pause(){//停止播放
+				$("#musics").get(0).pause();
+				$(".music").removeClass("rotate");
+			};
+		
+	}
     </script>
+   <script>
+   	var div2 = document.getElementById("music");
+   	 var flag = false;
+    var cur = {
+        x:0,
+        y:0
+    }
+    var nx,ny,dx,dy,x,y ;
+    function down(){
+        flag = true;
+        var touch ;
+        if(event.touches){
+            touch = event.touches[0];
+        }else {
+            touch = event;
+        }
+        cur.x = touch.clientX;
+        cur.y = touch.clientY;
+        dx = div2.offsetLeft;
+        dy = div2.offsetTop;
+    }
+    function move(){
+        if(flag){
+            var touch ;
+            if(event.touches){
+                touch = event.touches[0];
+            }else {
+                touch = event;
+            }
+            nx = touch.clientX - cur.x;
+            ny = touch.clientY - cur.y;
+            x = dx+nx;
+            if(x>=window.innerWidth){
+            	x= window.innerWidth-28
+            }
+            if(x<=0){
+            	x= 0
+            	
+            }
+            
+            y = dy+ny;
+            if(y>=window.innerHeight-78){
+            	y= window.innerHeight-78
+            }
+            if(y<=0){
+            	y= 0;
+            	console.log(y)
+            }
+            div2.style.left = x+"px";
+            
+            div2.style.top = y +"px";
+            //阻止页面的滑动默认事件
+            document.addEventListener("touchmove",function(){
+                event.preventDefault();
+            },false);
+        }
+    }
+    //鼠标释放时候的函数
+    function end(){
+        flag = false;
+    }
+    var div2 = document.getElementById("music");
+    console.log(div2)
+    div2.addEventListener("mousedown",function(){
+        down();
+    },false);
+    div2.addEventListener("touchstart",function(){
+        down();
+    },false)
+    div2.addEventListener("mousemove",function(){
+        move();
+    },false);
+    div2.addEventListener("touchmove",function(){
+        move();
+    },false)
+    document.body.addEventListener("mouseup",function(){
+        end();
+    },false);
+    div2.addEventListener("touchend",function(){
+        end();
+    },false);
+</script>
   </body>
 </html>
