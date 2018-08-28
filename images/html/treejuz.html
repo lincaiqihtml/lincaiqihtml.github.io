@@ -107,6 +107,7 @@
 			background: #f4f4f4;
 			border: 0;
 			border-top: 1px solid #d8d8d8;
+			z-index: 2;
 		}
 		
 		.tubiao1 {
@@ -161,7 +162,7 @@
 			padding: 3px;
 			height: 35px;
 			bottom: 7px;
-			padding: 5px 5px 5px 10px;
+			padding: 5px 5px 5px 5px;
 			text-shadow: 0px 0px 0px #000;
 			-webkit-text-fill-color: transparent;
 			background: transparent;
@@ -202,6 +203,7 @@
 			text-align: center;
 			padding-right: 2px;
 			line-height: 26px;
+			cursor: pointer;
 		}
 		
 		.music.rotate {
@@ -221,55 +223,29 @@
 			}
 		}
 	</style>
-	<body style="background: #ebebeb; backface-visibility: hidden;font-family:  src: url(" 小米兰亭.ttf ")>
+	<body style="background: #ebebeb; backface-visibility: hidden;font-family:  src: url("小米兰亭.ttf")">
   	<div id="time">00:00</div>
-  	<div class="music glyphicon glyphicon-music rotate " id="music">
-  		<audio id="musics" src="music.mp3 " autoplay="autoplay " loop="loop "></audio>
+  	<div class="music glyphicon glyphicon-music rotate" id="music">
+  		<audio id="musics" src="music.mp3 " autoplay="autoplay " loop="loop"></audio>
   	</div>
-  	<div class="row row1" style="height: 5px;"></div>
+  	<div class="row row1" style="height:5px;"></div>
 		<div class="row row1 row2 ">
-			<div class="touxiang "><span class="name ">林某某</span></div>
-			<div class="kuang">错的不是你而是这个世界</div>
-		</div>
-		<div class="row row1" >
-			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang">122</div>
-		</div>
-		<div class="row row1" >
-			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang">12121</div>
-		</div>
-		<div class="row row1" >
-			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang">12121</div>
-		</div>
-		<div class="row row1" >
-			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang">12121</div>
-		</div>
-		<div class="row row1" >
-			<div class="touxiang "><span class="name ">simle</span></div>
-			<div class="kuang ">12121</div>
-		</div>
-		<div class="row row1" >
-			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang ">12121</div>
-		</div>
-		<div class="row row1 " >
-			<div class="touxiang"><span class="name ">simle</span></div>
-			<div class="kuang ">12121</div>
-		</div>
-		<div class="row row1 " >
-			<div class="touxian"><span class="name "></span></div>
-			<div class="kuang "></div>
+			<div class="touxiang"><span class="name">simle</span></div>
+			<div class="kuang">??</div>
 		</div>
 		
 		
-		<div class="row dibu ">
-			<div class="tubiao1 "></div>
-			<input type="text " class="an " id="input" >
-			<div class="tubiao2 " id="tubiao2"></div>
-			<div class="tubiao3 "></div>
+		<div class="row" id="left" style="margin-left: 0px;"></div>
+		<div class="row" style="height:60px; width: 100%;"></div>
+		
+		<div class="row dibu">
+			<div class="tubiao1"></div>
+			<input type="text" class="an" id="input" >
+			<div class="tubiao2" id="tubiao2"></div>
+			<div class="tubiao3"></div>
+		</div>
+		<div id="con" style="display: none;">
+			
 		</div>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="jquery.min.js "></script>
@@ -280,6 +256,7 @@ window.onload=function (){
     	var Input = document.getElementById("input");
     	var tubiao = document.getElementById("tubiao2");
     	var music = document.getElementById("music");
+    	
 
     	var ts = tubiao.style
     	Input.onkeyup = function(){
@@ -289,24 +266,24 @@ window.onload=function (){
     		//fas()
     	}
     	function d(){//发生文字
-	    		if(Input.value == " ")
+	    		if(Input.value == "")
 	    	{
-	    		ts.width="34px ";
-	    		ts.height="34px ";
-	    		ts.borderRadius = "50% ";
-	    		ts.border="1px solid #6e7176 ";
-	    		tubiao.innerHTML =" "
-	    		ts.background=" "
-	    		ts.backgroundImage="url(t3.png) ";
-	    		ts.right="14px ";
+	    		ts.width="34px";
+	    		ts.height="34px";
+	    		ts.borderRadius = "50%";
+	    		ts.border="1px solid #6e7176";
+	    		tubiao.innerHTML =""
+	    		ts.background=""
+	    		ts.backgroundImage="url(t3.png)";
+	    		ts.right="14px";
 	    	}else{
-	    		ts.right="8px ";
-	    		ts.width="46px ";
-	    		ts.height="34px ";
+	    		ts.right="8px";
+	    		ts.width="46px";
+	    		ts.height="34px";
 	    		ts.background="#1aac19 ";
 	    		ts.border="1px solid #199b1d ";
-	    		ts.borderRadius ="4px ";
-	    		tubiao.innerHTML = " 发送 "
+	    		ts.borderRadius ="4px";
+	    		tubiao.innerHTML = "发送 "
 	    	}
     	}
     	Times()//时间
@@ -320,7 +297,7 @@ window.onload=function (){
     	}
     function jo(a){
     	if(a<10){
-    		return a = "0"+a
+    		 a = "0"+a
     	}else{
     		a = a
     	}
@@ -394,7 +371,7 @@ window.onload=function (){
             }
             if(y<=0){
             	y= 0;
-            	console.log(y)
+            	
             }
             div2.style.left = x+"px";
             
@@ -410,7 +387,7 @@ window.onload=function (){
         flag = false;
     }
     var div2 = document.getElementById("music");
-    console.log(div2)
+    
     div2.addEventListener("mousedown",function(){
         down();
     },false);
@@ -429,6 +406,106 @@ window.onload=function (){
     div2.addEventListener("touchend",function(){
         end();
     },false);
+    
+    
+    //var a ="http://music.163.com/api/song/media?id=29722582"
+    //"https://lincaiqihtml.github.io/images/one.lrc"
+   var a = ajaxGetHTML("https://lincaiqihtml.github.io/images/one.lrc")
+function ajaxGetHTML(webURL) { 
+            var url = webURL;  
+            if (url == "") url = document.getElementById("xurl").value;  
+            var xmlhttp;  
+            try {  
+                xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");  
+            } catch(e) {  
+                try {  
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");  
+                } catch(e) {}  
+            }  
+            if (!xmlhttp) xmlhttp = new XMLHttpRequest();  
+            xmlhttp.onreadystatechange = function() {  
+                if (xmlhttp.readyState == 4) {  
+                    var s = xmlhttp.responseText;
+					s =s.replace(/<.*?>/g,"");  
+                    s = s.replace(/</g, "<");  
+                    s = s.replace(/>/g, ">"); 
+					s = s.replace(/;/g, "<br>");
+					s = s.replace(/[\r\n]/g, "<br/>"); 
+					//console.log(s)
+					
+var lrc =s
+var lrcarr = lrc.split("[");//从哪个字符开始，分隔成数组 // xx.length获取数组的成员
+
+var html="";
+var con = document.getElementsByClassName("content")[0];//通过class类名去获取元素 数组的形式储存  []
+for( var i = 0; i < lrcarr.length;i++)
+{
+	var arr =lrcarr[i].split("]");//分割歌词与时间	把全部数组成员分割 字符 ]
+	var time =arr[0].split(".") ;//分割分秒和毫秒
+	var timer = time[0].split(":");//分割分和秒
+	
+	var ms = timer[0] * 60 + timer[1]*1;//分*60+秒*1=xx秒
+	//字符串类型乘以数字类型就会转化成为数字类型
+	var txtmusic =arr[1]//获取歌词部分；
+	if(txtmusic){
+	html +="<p id=" + ms + ">" + txtmusic +"</p>"+"</br>";
+	
+	}
+	
+	
+}
+var con = document.getElementById("con");
+	con.innerHTML = html;
+	var num = 0;
+var left = document.getElementById("left");
+var op = con.getElementsByTagName("p");//通过签名获取所有的p元素;
+var ks = null 
+var name = "simle"
+$("#musics").get(0).addEventListener("timeupdate",function(){
+		var scale = this.currentTime/this.duration;
+		var currenttime=this.currentTime;
+		var duration=this.duration;
+		var bfms = parseInt(this.currentTime);//当前播放的时间为秒
+		//console.log(op.length)
+		if(document.getElementById(bfms)){
+			var fragment = document.createDocumentFragment();//节点片段
+			var oBalloon  =	document.createElement('div')//创建div标签
+			var ms =document.getElementById(bfms).innerHTML
+			//console.log(ks)
+			if(ms!=ks){
+				oBalloon.className = 'row row1';
+			oBalloon.innerHTML = "<div class='touxiang'><span class='name'>"+name+"</span></div><div class='kuang'>"+ms+"</div>"
+			
+			fragment.appendChild(oBalloon);//放到body里面去
+			
+			left.appendChild(fragment);
+			ks=ms
+				
+			}
+			
+			//var ms =document.getElementById(bfms)
+			
+			
+		}
+
+	});
+	
+	
+	
+	
+	
+                }  
+            }  
+            xmlhttp.open("GET", url, true);  
+            xmlhttp.send(null);  
+        }   
+    
+    
+    	
+   
+    //获取歌词
+   
 </script>
-  </body>
+
+</body>
 </html>
