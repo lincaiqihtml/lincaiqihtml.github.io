@@ -30,15 +30,15 @@
 			margin-left: 10px;
 			margin-right: 0;
 			margin-top: 30px;
-			animation: 1s sq;
+			animation: 3s sq;
 		}
 		
 		@keyframes sq {
 			from {
-				margin-top: 50px;
+				opacity:0
 			}
 			to {
-				margin-top: 30px;
+				opacity:1
 			}
 		}
 		
@@ -56,17 +56,16 @@
 		}
 		
 		.kuang {
-			height: 34px;
+			
 			background: #fff;
 			border: #fccc solid 0.18rem;
-			;
 			float: left;
 			margin-left: 48px;
 			margin-top: -20px;
 			border-radius: 4px;
 			text-align: center;
-			line-height: 34px;
-			padding: 1px 6px 1px 6px;
+			line-height: 15px;
+			padding: 8px 8px 0px 8px;
 			white-space:nowrap;
 			font-size: 14px;
 			letter-spacing:1px
@@ -74,8 +73,8 @@
 		
 		.kuang:after {
 			position: relative;
-			left: -16px;
-			top: -22px;
+			left: -18px;
+			top: -14px;
 			float: left;
 			display: block;
 			content: '';
@@ -162,7 +161,7 @@
 			padding: 3px;
 			height: 35px;
 			bottom: 7px;
-			padding: 5px 5px 5px 5px;
+			padding: 5px 5px 0px 8px;
 			text-shadow: 0px 0px 0px #000;
 			-webkit-text-fill-color: transparent;
 			background: transparent;
@@ -197,7 +196,7 @@
 			position: fixed;
 			top: 100px;
 			float: right;
-			right: 6px;
+			right: 10px;
 			color: #f5f5f5;
 			font-size: 9px;
 			text-align: center;
@@ -222,20 +221,74 @@
 				transform: rotate(360deg);
 			}
 		}
+		.row2{
+			width: 100%;
+			border: #ccc solid 0px;
+			clear: both;
+			margin-top: 30px;
+			animation: 3s sq;
+		}
+		.touxianga{
+			width: 40px;
+			height: 40px;
+			background-image: url("1.jpg");
+			background-size: 100%;
+			float: right;
+			margin-right: 10px;
+			
+		}
+		
+		.kuanga{
+			background: #fff;
+			border: #fccc solid 0.18rem;
+			float: right;
+			margin-right:8px;
+			margin-top: 5px;
+			border-radius: 4px;
+			text-align: center;
+			line-height: 30px;
+			padding: 4px 8px 0px 8px;
+			white-space:nowrap;
+			font-size: 14px;
+			letter-spacing:1px;
+			
+		}
+		
+		.touxianga:after {
+			position: relative;
+			left: -8px;
+			top: 18px;
+			float: left;
+			display: block;
+			content: '';
+			border: 5px solid transparent;
+			border-right-color: #fff;
+			transform: rotate(180deg);
+			border-radius: 0%;
+			
+		}
+		
 	</style>
 	<body style="background: #ebebeb; backface-visibility: hidden;font-family:  src: url("小米兰亭.ttf")">
   	<div id="time">00:00</div>
   	<div class="music glyphicon glyphicon-music rotate" id="music">
-  		<audio id="musics" src="music.mp3 " autoplay="autoplay " loop="loop"></audio>
+  		<audio id="musics" src="music.mp3 " autoplay="autoplay " ></audio>
   	</div>
   	<div class="row row1" style="height:5px;"></div>
-		<div class="row row1 row2 ">
+		<div class="row row1">
 			<div class="touxiang"><span class="name">simle</span></div>
 			<div class="kuang">??</div>
 		</div>
 		
 		
-		<div class="row" id="left" style="margin-left: 0px;"></div>
+		<div class="row3" id="left" style="margin-left: 0px;">
+			
+		<div class="row row2">
+			<div class="touxianga"></div>
+			<div class="kuanga">1212</div>
+		</div>
+		
+		</div>
 		<div class="row" style="height:60px; width: 100%;"></div>
 		
 		<div class="row dibu">
@@ -247,23 +300,118 @@
 		<div id="con" style="display: none;">
 			
 		</div>
+		<div id="translate" style="display: none;"></div>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="jquery.min.js "></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="js/bootstrap.min.js "></script>
+    <script src="./md5.js"></script>
+<script type="text/javascript">//百度翻译api
+var translate = document.getElementById("translate");
+var Input = document.getElementById("input");
+
+//console.log(ss.success)
+
+</script>
+    
+    
     <script>
 window.onload=function (){
     	var Input = document.getElementById("input");
     	var tubiao = document.getElementById("tubiao2");
     	var music = document.getElementById("music");
+    	 	var left = document.getElementById("left");
+    	 	var row2 = document.getElementById("row2")
+    		var ww = window.innerWidth
+		var shart = 0
+	
     	
 
     	var ts = tubiao.style
     	Input.onkeyup = function(){
     		d()
     	}
-    	Input.onclick = function(){
-    		//fas()
+    	tubiao.onclick = function(){//发送文字
+    		if(shart == 1 ){
+    			
+    			
+    			
+    			
+    			
+    			
+    			
+    			
+    			
+    			
+    			
+var appid = '20180829000199975';
+var key = 'oXn_kcTj3vB10FImOgCL';
+var salt = (new Date).getTime();
+var query = Input.value;
+// 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+var from = 'auto';
+var to = 'en';
+var str1 = appid + query + salt +key;
+var sign = MD5(str1);
+var ss= $.ajax({
+    url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+    type: 'get',
+    dataType: 'jsonp',
+    data: {
+        q: query,
+        appid: appid,
+        salt: salt,
+        from: from,
+        to: to,
+        sign: sign
+    },
+    success: function (data) {
+        //console.log(data);
+        //console.log(data.trans_result[0].dst);
+        //console.log(data.trans_result[0].src);
+         deta = data.trans_result[0].dst;
+        var pos = 0
+        var currentStr =""
+        
+        var fragments = document.createDocumentFragment();//节点片段
+			var oBalloons  =document.createElement('div')//创建div标签
+			var tss = Input.value;
+			var translate = document.getElementById("translate");
+			
+			tss =deta
+			oBalloons.className = 'row row2';
+			var length = tss.length
+			
+            
+			
+			oBalloons.innerHTML = "<div class='touxianga'></div><div class='kuanga'>"+tss+"</div>"
+			fragments.appendChild(oBalloons);//放到body里面去
+			left.appendChild(fragments);
+	        Input.value=""
+	        scrollToEnd()
+        	function scrollToEnd(){//滚动到底部
+            var h = $(document).height()-$(window).height();
+            $(document).scrollTop(h);
+           		}
+        
+        
+        
+    } 
+    
+});
+    			
+    			
+    			
+    			
+    			
+    			
+    			
+    		
+    			
+    			}
+    		
+    			
+    		
     	}
     	function d(){//发生文字
 	    		if(Input.value == "")
@@ -276,6 +424,7 @@ window.onload=function (){
 	    		ts.background=""
 	    		ts.backgroundImage="url(t3.png)";
 	    		ts.right="14px";
+	    		 shart = 0
 	    	}else{
 	    		ts.right="8px";
 	    		ts.width="46px";
@@ -283,7 +432,8 @@ window.onload=function (){
 	    		ts.background="#1aac19 ";
 	    		ts.border="1px solid #199b1d ";
 	    		ts.borderRadius ="4px";
-	    		tubiao.innerHTML = "发送 "
+	    		tubiao.innerHTML = "发送 ";
+	    		shart = 1
 	    	}
     	}
     	Times()//时间
@@ -475,10 +625,24 @@ $("#musics").get(0).addEventListener("timeupdate",function(){
 			if(ms!=ks){
 				oBalloon.className = 'row row1';
 			oBalloon.innerHTML = "<div class='touxiang'><span class='name'>"+name+"</span></div><div class='kuang'>"+ms+"</div>"
-			
 			fragment.appendChild(oBalloon);//放到body里面去
-			
 			left.appendChild(fragment);
+			var a = document.documentElement.scrollTop==0? document.body.clientHeight : document.documentElement.clientHeight;
+			var b = document.documentElement.scrollTop==0? document.body.scrollTop : document.documentElement.scrollTop;
+			var c = document.documentElement.scrollTop==0? document.body.scrollHeight : document.documentElement.scrollHeight;
+			if(a+b==c){
+				
+			}
+			//scrollToEnd()
+			
+			
+				scrollToEnd()
+			
+			
+			function scrollToEnd(){//滚动到底部
+            var h = $(document).height()-$(window).height();
+            $(document).scrollTop(h);
+           		}
 			ks=ms
 				
 			}
